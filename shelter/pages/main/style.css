@@ -27,6 +27,8 @@ html {
   --color-light-s: #fafafa;
   --color-light-xl: #ffffff;
   --color-dark-3xl: #292929;
+  --color-dark-l: #545454;
+  --color-dark-xl: #4c4c4c;
   --font-size-1: 20px;
   --smooth-time-slow: 0.8s;
   --smooth-time-middle: 0.6s;
@@ -129,8 +131,8 @@ body {
   font-family: Arial;
   font-style: normal;
   font-weight: normal;
-  font-size: 15px;
-  line-height: 24px;
+  /* font-size: 15px;
+  line-height: 24px; */
   color: var(--color-dark-s);
   /* letter-spacing: 10%; */
 }
@@ -233,6 +235,43 @@ body {
   border-radius: 100px;
   cursor: pointer;
 }
+.start__screen {
+
+}
+
+/* ------------------------------about----------------------------1280--- */
+
+.about {
+  background-color: var(--color-light-xl);
+}
+.about-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 120px;
+  padding: 80px 0 100px 0;
+}
+.about__content {
+  width: 430px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-self: center;
+  gap: 23px;
+  /* margin: 15px 0 0 0; */
+}
+.about__title {
+  font-size: 35px;
+  line-height: 1.3em;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
+.about__subtitle {
+  font-family: Arial;
+  color: var(--color-dark-xl);
+}
+
 .start__screen {
 
 }
