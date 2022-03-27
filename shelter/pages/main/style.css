@@ -354,6 +354,133 @@ body {
   align-self: center;
   margin: 5px 0 0 0;
 }
+/* -------------------------------pets-----------------------------1280--- */
+
+.pets {
+  background-color: var(--color-light-l);
+}
+.pets-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 0 100px 0;
+}
+.pets__title {
+  font-size: 35px;
+  line-height: 1.3em;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+  text-align: center;
+}
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 53px;
+}
+.wrapper-slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+}
+.slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  background-color: var(--color-light-s);
+  padding: 0 0 30px 0;
+}
+.slide__photo {
+  width: 270px;
+  height: 270px; 
+}
+.slide__subtitle {
+  font-size: 20px;
+  line-height: 22.7px;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
+.slide__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  line-height: 1.3em;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-3xl);
+  background-color: transparent;
+  width: 187px;
+  height: 52px;
+  border: 2px solid var(--color-primary);
+  border-radius: 100px;
+  cursor: pointer;
+}
+.slide__button_prev {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  line-height: 1.3em;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-3xl);
+  background-color: transparent;
+  width: 52px;
+  height: 52px;
+  border: 2px solid var(--color-primary);
+  border-radius: 100px;
+  cursor: pointer;
+}
+.slide__button_next {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  line-height: 1.3em;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-3xl);
+  background-color: transparent;
+  width: 52px;
+  height: 52px;
+  border: 2px solid var(--color-primary);
+  border-radius: 100px;
+  cursor: pointer;
+}
+.pets__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  line-height: 1.3em;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-3xl);
+  background-color: var(--color-primary);
+  width: 261px;
+  height: 52px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.pet-food {
+  background-image: url('./../../assets/icons/icon-pet-food.svg');
+}
+.transportation {
+  background-image: url('./../../assets/icons/icon-transportation.svg');
+}
+
+
+
+
+
 
 /* -------------------------------help-----------------------------1280--- */
 
