@@ -148,7 +148,7 @@ body {
 .menu__link:hover {
   color: var(--color-white);
 }
-.menu__item:first-child {
+.menu__item.active {
   color: var(--color-light-s);
   border-bottom: 3px solid var(--color-primary);
 }
