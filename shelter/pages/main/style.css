@@ -92,6 +92,13 @@ body {
   margin: 0;
   padding: 0;
 }
+.button_primary:hover {
+  background-color: var(--color-primary-light);
+}
+.button_transparent:hover {
+  background-color: var(--color-primary-light);
+  border: none;
+}
 /* -------------------------------header----------------------------1280--- */
 .header-block {
   background: url('./../../assets/images/main-1280/start-screen-background.jpg');
@@ -425,8 +432,8 @@ body {
 }
 .slide__button_prev {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
   font-size: 17px;
   line-height: 1.3em;
@@ -435,6 +442,9 @@ body {
   background-color: transparent;
   width: 52px;
   height: 52px;
+  background-image: url('./../../assets/icons/arrow-prev.svg');
+  background-position: center center;
+  background-repeat: no-repeat;  
   border: 2px solid var(--color-primary);
   border-radius: 100px;
   cursor: pointer;
@@ -451,6 +461,9 @@ body {
   background-color: transparent;
   width: 52px;
   height: 52px;
+  background-image: url('./../../assets/icons/arrow-next.svg');
+  background-position: center center;
+  background-repeat: no-repeat; 
   border: 2px solid var(--color-primary);
   border-radius: 100px;
   cursor: pointer;
