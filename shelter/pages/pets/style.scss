@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Georgia';
+  src: url("../../assets/fonts/georgia.ttf");
+  // font-weight: 400;
+}
+@font-face {
+  font-family: 'Arial';
+  src: url("../../assets/fonts/arial.ttf");
+  // font-weight: 400;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+  line-height: 1;
+}
+*,
+*::before,
+*::after {
+  margin: inherit;
+  padding: inherit;
+  border: inherit;
+  box-sizing: inherit;
+}
+a {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
