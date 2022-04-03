@@ -9,6 +9,73 @@
   // font-weight: 400;
 }
 
+
+// $font-title-g-1:   font-family: Georgia;
+// font-style: normal;
+// font-weight: normal;
+// font-size: 15px;
+// line-height: 24px;
+
+$color-black: #000000;
+$color-white: #ffffff;
+$color-primary: #f1cdb3;
+$color-primary-light: #fddcc4;
+$color-dark-s: #cdcdcd;
+$color-light-s: #fafafa;
+$color-light-xl: #ffffff;
+$color-dark-3xl: #292929;
+$color-dark-l: #545454;
+$color-light-l: #f6f6f6;
+$color-dark-xl: #4c4c4c;
+$color-dark-m: #b2b2b2;
+
+$font-size-1: 20px;
+$font-section-title: 35px;
+
+$fz-logo-title: 32px;
+$lh-logo-title: 1.1em;
+$ls-logo-title: 0.06em;
+$fz-logo-subtitle: 13px;
+$lh-logo-subtitle: 1.15em; 
+$ls-logo-subtitle: 0.1em;
+
+$fz-about-title: 44px;
+$fz-about-title-320: 25px;
+$lh-about-title: 1.3em;
+$fz-burger-title: 15px;
+$fz-burger-title-320: 32px;
+$lh-burger-title: 1.6em;
+
+$fz-section-title: 35px;
+$fz-section-title-320: 25px;
+$lh-section-title: 1.3em;
+$ls-section-title: 0.06em;
+$fz-section-subtitle: 20px;
+$fz-section-subtitle-320: 15px;
+$lh-section-subtitle: 23px;             // or 1.14em 
+$lh-section-subtitle-320: 1.1em;
+$ls-section-subtitle: 0.06em;
+$fz-section-text: 15px;
+$lh-section-text: 1.6em;
+
+$lh-modal-text: 13px;
+$lh-modal-text: 1.1em;
+$ls-modal-text: 0.06em;
+$lh-modal-subtext: 15px; 
+$lh-modal-subtext: 1.1em;
+$ls-modal-subtext: 0.06em;
+
+
+$fz-button: 17px;
+$lh-button: 1.3em;
+$ls-button: 0.06em;
+// $letter-spacing-section-text: 0.06em;
+
+$smooth-time-slow: 0.8s;
+$smooth-time-middle: 0.6s;
+$smooth-time-fast: 0.4s;
+
+
 html {
   margin: 0;
   padding: 0;
@@ -50,4 +117,46 @@ h5,
 h6 {
   font-weight: inherit;
   font-size: inherit;
+}
+
+.body-block {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  color: #cecece;
+  background-color: #1e1678;
+
+  // max-width: 1280px;
+  // min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .wrapper {
+    max-width: 750px;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 500px;
+  }
+}
+@media (max-width: 520px) {
+  .wrapper {
+    max-width: 320px;
+  }
 }
