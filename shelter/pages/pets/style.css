@@ -1,17 +1,200 @@
-/* Error: expected "}".
- *     ,
- * 245 | }
- *     |  ^
- *     '
- *   shelter\pages\pets\style.scss 245:2  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "}".\a     \2577 \a 245 \2502  }\a     \2502   ^\a     \2575 \a   shelter\\pages\\pets\\style.scss 245:2  root stylesheet';
+@font-face {
+  font-family: 'Georgia';
+  src: url("../../assets/fonts/georgia.ttf");
 }
+
+@font-face {
+  font-family: 'Arial';
+  src: url("../../assets/fonts/arial.ttf");
+}
+
+/* -------------------font-property-------------------*/
+/* -------------------pattern-------------------*/
+.header-wrapper, .menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+  line-height: 1;
+}
+
+*,
+*::before,
+*::after {
+  margin: inherit;
+  padding: inherit;
+  border: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.body-block {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  color: #cecece;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* -------------------------------header----------------------------1280--- */
+.header-block {
+  background-color: rebeccapurple;
+}
+
+.header-wrapper {
+  padding: 60px 0;
+}
+
+.header__logo_title {
+  font-size: 32px;
+  line-height: 1.1em;
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
+  margin: 0;
+  /* line-height: 40px; */
+}
+
+.header__logo_subtitle {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1.15em;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  /* line-height: 40px; */
+}
+
+.menu__list {
+  gap: 35px;
+}
+
+.menu__item {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  /* font-size: 15px;
+  line-height: 24px; */
+  color: var(--color-dark-s);
+  /* letter-spacing: 10%; */
+}
+
+.menu__link {
+  color: inherit;
+}
+
+.menu__link:hover {
+  color: var(--color-white);
+}
+
+.menu__item.active {
+  color: var(--color-light-s);
+  border-bottom: 3px solid var(--color-primary);
+}
+
+/* ------------------------header-burger------------------------ */
+.wrapper-burger {
+  display: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 40px;
+  height: 28px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+/* -------------------------------pets-----------------------------1280--- */
+.pets {
+  background-color: var(--color-light-l);
+}
+
+@media (max-width: 1279.98px) {
+  .wrapper {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .wrapper {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 520px) {
+  .wrapper {
+    max-width: 320px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

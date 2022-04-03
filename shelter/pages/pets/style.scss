@@ -161,10 +161,7 @@ h6 {
   padding: 60px 0;
 }
 
-/* .main-header {
-  background-position: -5px -30px;
-  background-size: auto 620px;
-}   */
+
 .header__logo_title {
   font-size: $fz-logo-title;
   line-height: $lh-logo-title;
@@ -206,7 +203,7 @@ h6 {
 .menu__item.active {
   color: var(--color-light-s);
   border-bottom: 3px solid var(--color-primary);
-
+}
 /* ------------------------header-burger------------------------ */
 .wrapper-burger {
   display: none;
@@ -214,9 +211,9 @@ h6 {
   width: 40px;
   height: 28px;
   transform:  rotate(0deg);
-  -webkit-transition: all $time-slow ease-in-out;
-  -o-transition: all $time-slow ease-in-out;
-  transition: all $time-slow ease-in-out;
+  -webkit-transition: all $smooth-time-slow ease-in-out;
+  -o-transition: all $smooth-time-slow ease-in-out;
+  transition: all $smooth-time-slow ease-in-out;
 }
 /* -------------------------------pets-----------------------------1280--- */
 .pets {
