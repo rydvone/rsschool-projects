@@ -55,7 +55,7 @@ a {
 }
 .link:hover {
   text-decoration: none;
-  color: var(--color-yellow);
+  /* color: var(--color-yellow); */
 }
 
 ul {
