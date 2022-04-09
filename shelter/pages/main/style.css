@@ -12,6 +12,32 @@
 
 /* -------------------font-property-------------------*/
 /* -------------------pattern-------------------*/
+.header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.body-block, .main-block, .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -67,16 +93,6 @@ body {
   background-color: #1e1678;
   max-width: 1280px;
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: 0 auto;
 }
 
@@ -86,16 +102,6 @@ body {
 }
 
 .main-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: 0;
   padding: 0;
 }
@@ -117,16 +123,6 @@ body {
 }
 
 .header-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 60px 0;
 }
 
@@ -134,14 +130,18 @@ body {
   background-position: -5px -30px;
   background-size: auto 620px;
 }   */
+.header__logo {
+  gap: 10px;
+}
+
 .header__logo_title {
   font-size: 32px;
   font-style: normal;
   font-weight: normal;
+  line-height: 1.1em;
   letter-spacing: 0.06em;
   color: #f1cdb3;
   margin: 0;
-  /* line-height: 40px; */
 }
 
 .header__logo_subtitle {
@@ -149,9 +149,11 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
+  line-height: 1.15em;
   letter-spacing: 0.1em;
   color: #ffffff;
-  /* line-height: 40px; */
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .menu__list {
