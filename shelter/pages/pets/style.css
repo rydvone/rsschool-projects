@@ -410,6 +410,12 @@ body {
   cursor: pointer;
 }
 
+.double-more:hover,
+.more:hover {
+  background-color: #fddcc4;
+  border: none;
+}
+
 .slide__button_prev {
   display: -webkit-box;
   display: -ms-flexbox;
