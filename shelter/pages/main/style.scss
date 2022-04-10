@@ -147,6 +147,10 @@ body {
   background-color: $color-primary-light;
   border: none;
 }
+
+.button__link {
+  display: block;
+}
 /* -------------------------------header----------------------------1280--- */
 .header-block {
   // background: url('./../../assets/images/main-1280/start-screen-background.jpg');
