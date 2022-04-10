@@ -23,7 +23,7 @@
           justify-content: space-between;
 }
 
-.body-block, .main-block, .header__logo, .pets-wrapper, .footer__contacts, .footer__location {
+.body-block, .main-block, .header__logo, .pets-wrapper, .slide, .footer__contacts, .footer__location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -216,6 +216,143 @@ body {
   text-align: center;
 }
 
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px 40px;
+  padding: 15px 0;
+}
+
+.slide {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  background-color: #fafafa;
+  padding: 0 0 30px 0;
+}
+
+.slide:hover {
+  cursor: pointer;
+}
+
+.slide:hover .button_transparent {
+  background-color: #fddcc4;
+  border: none;
+}
+
+.slide:hover .pets-katrine {
+  background-image: url("./../../assets/images/pets/pets-katrine-h.png");
+}
+
+.slide:hover .pets-jennifer {
+  background-image: url("./../../assets/images/pets/pets-jennifer-h.png");
+}
+
+.slide:hover .pets-woody {
+  background-image: url("./../../assets/images/pets/pets-woody-h.png");
+}
+
+.slide:hover .pets-sophia {
+  background-image: url("./../../assets/images/pets/pets-sophia-h.png");
+}
+
+.slide:hover .pets-timmy {
+  background-image: url("./../../assets/images/pets/pets-timmy-h.png");
+}
+
+.slide:hover .pets-charly {
+  background-image: url("./../../assets/images/pets/pets-charly-h.png");
+}
+
+.slide:hover .pets-scarlett {
+  background-image: url("./../../assets/images/pets/pets-scarlett-h.png");
+}
+
+.slide:hover .pets-freddie {
+  background-image: url("./../../assets/images/pets/pets-freddie-h.png");
+}
+
+.slide__photo {
+  width: 270px;
+  height: 270px;
+}
+
+.slide__subtitle {
+  font-size: 20px;
+  line-height: 22.7px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.slide__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 17px;
+  line-height: 1.3em;
+  letter-spacing: 0.06em;
+  color: #292929;
+  background-color: transparent;
+  width: 187px;
+  height: 52px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.pets-katrine {
+  background-image: url("./../../assets/images/pets/pets-katrine.png");
+}
+
+.pets-jennifer {
+  background-image: url("./../../assets/images/pets/pets-jennifer.png");
+}
+
+.pets-woody {
+  background-image: url("./../../assets/images/pets/pets-woody.png");
+}
+
+.pets-sophia {
+  background-image: url("./../../assets/images/pets/pets-sophia.png");
+}
+
+.pets-timmy {
+  background-image: url("./../../assets/images/pets/pets-timmy.png");
+}
+
+.pets-charly {
+  background-image: url("./../../assets/images/pets/pets-charly.png");
+}
+
+.pets-scarlett {
+  background-image: url("./../../assets/images/pets/pets-scarlett.png");
+}
+
+.pets-freddie {
+  background-image: url("./../../assets/images/pets/pets-freddie.png");
+}
+
 .slider-control {
   width: 340px;
   height: 52px;
@@ -294,35 +431,6 @@ body {
   background-color: transparent;
   width: 52px;
   height: 52px;
-  border: 2px solid #f1cdb3;
-  border-radius: 100px;
-  cursor: pointer;
-}
-
-.slide__button_next {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 17px;
-  line-height: 1.3em;
-  letter-spacing: 0.06em;
-  color: #292929;
-  background-color: transparent;
-  width: 52px;
-  height: 52px;
-  background-image: url("./../../assets/icons/arrow-next.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
   border: 2px solid #f1cdb3;
   border-radius: 100px;
   cursor: pointer;
