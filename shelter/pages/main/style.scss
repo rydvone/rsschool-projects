@@ -107,6 +107,12 @@ ol,
 li {
   list-style: none;
 }
+button, 
+button:active, 
+button:focus {
+  outline: none;
+  border: none;
+}
 body {
   color: $color-white;
 }
@@ -180,33 +186,32 @@ body {
   line-height: $lh-logo-subtitle;
   letter-spacing: $ls-logo-subtitle;
   color: $color-light-xl;
-  // align-self: flex-end;
+  padding: 0 0 0 2px;
 }
 
 .menu__list {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 35px;
+  gap: 36px;
 }
 .menu__item {
   font-family: Arial;
   font-style: normal;
   font-weight: normal;
-  /* font-size: 15px;
-  line-height: 24px; */
+  font-size: $fz-burger-title;
+  line-height: $lh-burger-title;
   color: $color-dark-s;
-  /* letter-spacing: 10%; */
+  &.active {
+    color: $color-light-s;
+    border-bottom: 3px solid $color-primary;
+  }
 }
 .menu__link {
   color: inherit;
-}
-.menu__link:hover {
-  color: $color-white;
-}
-.menu__item.active {
-  color: $color-light-s;
-  border-bottom: 3px solid $color-primary;
+  &:hover {
+    color: $color-light-s;
+  }
 }
 /* ------------------------header-burger------------------------ */
 .wrapper-burger {
@@ -289,8 +294,8 @@ body {
   justify-content: center;
   align-items: center;
   align-self: center;
-  font-size: 17px;
-  letter-spacing: 0.06em;
+  font-size: $fz-button;
+  letter-spacing: $ls-button;
   color: $color-dark-3xl;
   background-color: $color-primary;
   width: 207px;
@@ -314,20 +319,23 @@ body {
   gap: 120px;
   padding: 80px 0 100px 0;
 }
+.about__screen {
+  height: 408px;
+}
 .about__content {
   width: 430px;
   height: 380px;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-self: center;
-  gap: 23px;
+  // gap: 25px;
   /* margin: 15px 0 0 0; */
 }
 .about__title {
-  font-size: 35px;
-  line-height: 1.3em;
-  letter-spacing: 0.06em;
+  font-size: $fz-section-title;
+  line-height: $lh-section-title;
+  letter-spacing: $ls-section-title;
   color: $color-dark-l;
 }
 .about__subtitle {
@@ -638,19 +646,15 @@ body {
 .footer__contacts {
   width: 279px;
   height: 234px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @extend %flex-col-sb;
   align-self: flex-start;
-  margin: 15px 0 0 0;
+  margin: 17px 0 0 0;
 }
 .footer__location {
   width: 302px;
   height: 234px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 15px 0 0 0;
+  @extend %flex-col-sb;
+  margin: 17px 0 0 0;
 }
 .contacts {
   display: flex;

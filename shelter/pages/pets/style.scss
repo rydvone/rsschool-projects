@@ -141,29 +141,32 @@ body {
 
 /* -------------------------------header----------------------------1280--- */
 .header-block {
-  // background: url('./../../assets/images/main-1280/start-screen-background.jpg');
-  // background-position: center 0;
-  // background-repeat: no-repeat;
-  // width: 100%;  
-  // margin: 0 auto; 
   background-color: $color-light-xl;
 }
+
 .header-wrapper {
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
-
-  
+  @extend %flex-row-sb;
+  padding: 30px 0;
 }
+/* .main-header {
+  background-position: -5px -30px;
+  background-size: auto 620px;
+}   */
 
-
+.header__logo {
+  @extend %flex-col-sb;
+  height: 60px;
+  align-items: center;
+}
 .header__logo_title {
   font-size: $fz-logo-title;
+  font-style: normal;
+  font-weight: normal;
   line-height: $lh-logo-title;
   letter-spacing: $ls-logo-title;
-  color: $color-primary;
+  color: $color-dark-l;
   margin: 0;
-  /* line-height: 40px; */
+  
 }
 .header__logo_subtitle {
   font-family: Arial;
@@ -172,32 +175,33 @@ body {
   font-size: $fz-logo-subtitle;
   line-height: $lh-logo-subtitle;
   letter-spacing: $ls-logo-subtitle;
-  color: $color-white;
-  /* line-height: 40px; */
+  color: $color-dark-3xl;
+  padding: 0 0 0 2px;
 }
 
 .menu__list {
-  @extend %flex-row-sb;
-  gap: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 36px;
 }
 .menu__item {
   font-family: Arial;
   font-style: normal;
   font-weight: normal;
-  /* font-size: 15px;
-  line-height: 24px; */
-  color: $color-dark-s;
-  /* letter-spacing: 10%; */
+  font-size: $fz-burger-title;
+  line-height: $lh-burger-title;
+  color: $color-dark-l;
+  &.active {
+    color: $color-dark-l;
+    border-bottom: 3px solid $color-primary;
+  }
 }
 .menu__link {
   color: inherit;
-  &:hover {
-    color: $color-white;
-  }
-  .active & {
-    color: $color-light-s;
-    border-bottom: 3px solid $color-primary;
-  }
+  &:hover{
+    color: $color-dark-3xl;
+  }  
 }
 
 /* ------------------------header-burger------------------------ */
@@ -235,19 +239,15 @@ body {
 .footer__contacts {
   width: 279px;
   height: 234px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @extend %flex-col-sb;
   align-self: flex-start;
-  margin: 15px 0 0 0;
+  margin: 17px 0 0 0;
 }
 .footer__location {
   width: 302px;
   height: 234px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 15px 0 0 0;
+  @extend %flex-col-sb;
+  margin: 17px 0 0 0;
 }
 .contacts {
   display: flex;
