@@ -384,6 +384,10 @@ body {
   color: $color-dark-3xl;
   border: 2px solid $color-primary;
   cursor: pointer;
+  &:hover {
+    background-color: $color-primary-light;
+    border: none;
+  }
 }
 
 .slide__button_prev {
