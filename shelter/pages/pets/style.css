@@ -109,6 +109,9 @@ body {
 /* -------------------------------header----------------------------1280--- */
 .header-block {
   background-color: #ffffff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .header-wrapper {

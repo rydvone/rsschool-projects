@@ -141,6 +141,8 @@ body {
 /* -------------------------------header----------------------------1280--- */
 .header-block {
   background-color: $color-light-xl;
+  position: sticky;
+  top: 0;
 }
 
 .header-wrapper {
