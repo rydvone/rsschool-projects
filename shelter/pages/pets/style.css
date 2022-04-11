@@ -182,6 +182,10 @@ body {
   color: #292929;
 }
 
+.menu__link.active:hover {
+  color: #545454;
+}
+
 /* ------------------------header-burger------------------------ */
 .wrapper-burger {
   display: none;

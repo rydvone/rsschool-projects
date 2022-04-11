@@ -196,7 +196,10 @@ body {
   color: inherit;
   &:hover{
     color: $color-dark-3xl;
-  }  
+  }
+  &.active:hover {
+    color: $color-dark-l;
+  }
 }
 
 /* ------------------------header-burger------------------------ */
