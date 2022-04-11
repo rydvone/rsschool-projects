@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Georgia';
+  font-family: 'georgia';
   src: url("../../assets/fonts/georgia.ttf");
-  // font-weight: 400;
+  font-weight: 400;
 }
 @font-face {
   font-family: 'Arial';
   src: url("../../assets/fonts/arial.ttf");
-  // font-weight: 400;
+  font-weight: 400;
 }
 
 $color-black: #000000;
@@ -123,7 +123,6 @@ body {
   color: #cecece;
   background-color: #1e1678;
 
-  // max-width: 2560px;
   min-height: 100vh;
   @extend %flex-col-sb;
   margin: 0 auto;
@@ -148,11 +147,6 @@ body {
   @extend %flex-row-sb;
   padding: 30px 0;
 }
-/* .main-header {
-  background-position: -5px -30px;
-  background-size: auto 620px;
-}   */
-
 .header__logo {
   @extend %flex-col-sb;
   height: 60px;
@@ -165,8 +159,7 @@ body {
   line-height: $lh-logo-title;
   letter-spacing: $ls-logo-title;
   color: $color-dark-l;
-  margin: 0;
-  
+  margin: 0;  
 }
 .header__logo_subtitle {
   font-family: Arial;
@@ -226,9 +219,9 @@ body {
   padding: 80px 0 100px 0;
 }
 .pets__title {
-  font-size: 35px;
-  line-height: 1.3em;
-  letter-spacing: 0.06em;
+  font-size: $fz-section-title;
+  line-height: $lh-section-title;
+  letter-spacing: $ls-section-title;
   color: $color-dark-l;
   text-align: center;
 }
@@ -240,49 +233,22 @@ body {
   gap: 30px 40px;
   padding: 15px 0;
 }
-// .wrapper-slide {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 90px;
-// }
+
 .slide {
   @extend %flex-col-sb;
   align-items: center;
   gap: 30px;
   background-color: $color-light-s;
   padding: 0 0 30px 0;
+  border-radius: 9px;
   &:hover {
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    background-color: $color-light-xl;
     cursor: pointer;
     .button_transparent {
       background-color: $color-primary-light;
       border: none;
     }
-    .pets-katrine {
-      background-image: url('./../../assets/images/pets/pets-katrine-h.png');
-    }
-    .pets-jennifer {
-      background-image: url('./../../assets/images/pets/pets-jennifer-h.png');
-    }
-    .pets-woody {
-      background-image: url('./../../assets/images/pets/pets-woody-h.png');
-    }
-    .pets-sophia {
-      background-image: url('./../../assets/images/pets/pets-sophia-h.png');
-    }
-    .pets-timmy {
-      background-image: url('./../../assets/images/pets/pets-timmy-h.png');
-    }
-    .pets-charly {
-      background-image: url('./../../assets/images/pets/pets-charly-h.png');
-    }
-    .pets-scarlett {
-      background-image: url('./../../assets/images/pets/pets-scarlett-h.png');
-    }
-    .pets-freddie {
-      background-image: url('./../../assets/images/pets/pets-freddie-h.png');
-    }    
   }
 }
 .slide__photo {
@@ -290,9 +256,9 @@ body {
   height: 270px; 
 }
 .slide__subtitle {
-  font-size: 20px;
+  font-size: $fz-section-subtitle;
   line-height: 22.7px;
-  letter-spacing: 0.06em;
+  letter-spacing: $ls-section-subtitle;
   color: $color-dark-l;
 }
 .slide__button {
@@ -390,25 +356,6 @@ body {
   }
 }
 
-.slide__button_prev {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center;
-  font-size: 17px;
-  line-height: 1.3em;
-  letter-spacing: 0.06em;
-  color: $color-dark-3xl;
-  background-color: transparent;
-  width: 52px;
-  height: 52px;
-  // background-image: url('./../../assets/icons/arrow-prev.svg');
-  // background-position: center center;
-  // background-repeat: no-repeat;  
-  border: 2px solid $color-primary;
-  border-radius: 100px;
-  cursor: pointer;
-}
 
 /* -----------------------------footer----------------------------1280--- */
 
@@ -442,15 +389,15 @@ body {
   gap: 20px;
 }
 .contacts__title {
-  font-size: 35px;
-  line-height: 1.3em;
-  letter-spacing: 0.06em;
+  font-size: $fz-section-title;
+  line-height: $lh-section-title;
+  letter-spacing: $ls-section-title;
   color: $color-light-xl;
 }
 .contacts__subtitle {
-  font-size: 20px;
-  line-height: 23px;
-  letter-spacing: 0.06em;
+  font-size: $fz-section-subtitle;
+  line-height: $lh-section-subtitle;
+  letter-spacing: $ls-section-subtitle;
   color: $color-primary;
 }
 .contacts__logo_email {
