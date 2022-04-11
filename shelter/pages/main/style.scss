@@ -580,6 +580,7 @@ body {
   background-color: $color-primary;
   width: 349px;
   height: 43px;
+  margin: -1px 0 0 0;
   padding: 10px 15px;
   border-radius: 9px;
   cursor: pointer;
@@ -606,7 +607,7 @@ body {
 }
 .donation__screen {
   align-self: center;
-  margin: 5px 0 0 0;
+  margin: 7px 0 0 0;
 }
 .img__donation {
   object-fit: fill;
