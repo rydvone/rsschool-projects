@@ -152,7 +152,8 @@ body {
 }
 /* -------------------------------header----------------------------1280--- */
 .header-block {
-  background: url('./../../assets/images/main-1280/start-screen-background-2x.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  background: url(./../../assets/images/noise_transparent@2x.png), 
+  radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 .header-wrapper {
   @extend %flex-row-sb;
@@ -183,6 +184,7 @@ body {
   letter-spacing: $ls-logo-subtitle;
   color: $color-light-xl;
   padding: 0 0 0 2px;
+  margin: 0;
 }
 
 .menu__list {
@@ -257,7 +259,8 @@ body {
 
 .start-screen {
   height: 728px;
-  background: url('./../../assets/images/main-1280/start-screen-background-2x.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  background: url(./../../assets/images/noise_transparent@2x.png), 
+  radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 .start-screen-wrapper {
   @extend %flex-row-sb;
@@ -375,8 +378,11 @@ body {
     background-color: $color-light-xl;
     cursor: pointer;
     .button_transparent {
-      background-color: $color-primary-light;
+      background-color: $color-primary;
       border: none;
+    }
+    .button_transparent:hover {
+      background-color: $color-primary-light;
     }
   }
 }
@@ -553,7 +559,7 @@ body {
   flex-direction: row;
   justify-content: center;
   gap: 30px;
-  padding: 80px 0 101px 0;
+  padding: 82px 0 101px 0;
 }
 .donation__content {
   width: 380px;
@@ -616,7 +622,8 @@ body {
 /* -----------------------------footer----------------------------1280--- */
 
 .footer-block {
-  background: url('./../../assets/images/main-1280/footer-background-2x.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  background: url(./../../assets/images/noise_transparent@2x.png), 
+  radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 .footer-wrapper {
   @extend %flex-row-sb;
@@ -669,4 +676,7 @@ body {
   background-image: url('./../../assets/images/main-1280/svg/icon-marker.svg');
   width: 22px;
   height: 32px;
+}
+.img__footer {
+  display: block;
 }
