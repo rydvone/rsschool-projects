@@ -638,17 +638,12 @@ body {
   }
   .contacts__title {
     font-size: 25px;
-    line-height: 1.3em;
-    letter-spacing: 0.06em;
-    color: #ffffff;
     text-align: center;
     padding: 0 10px;
   }
   .contacts__subtitle {
     font-size: 20px;
     line-height: 1.3em;
-    letter-spacing: 0.06em;
-    color: #f1cdb3;
   }
   .img__footer {
     width: 260px;
