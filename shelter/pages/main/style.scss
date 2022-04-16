@@ -126,7 +126,6 @@ button:focus {
 body {
   color: $color-white;
 }
-
 .body-block {
   font-family: Georgia;
   font-style: normal;
@@ -140,13 +139,11 @@ body {
   @extend %flex-col-sb;
   margin: 0 auto;
 }
-
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 40px;
 }
-
 .main-block {
   @extend %flex-col-sb;
   margin: 0;
@@ -974,7 +971,7 @@ body {
     margin: 0;
   }
 
-  /* -----------------------------footer----------------------------1280--- */
+  /* -----------------------------footer----------------------------768--- */
 
   .footer-wrapper {
     display: flex;
