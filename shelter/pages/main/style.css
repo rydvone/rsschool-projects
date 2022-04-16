@@ -763,7 +763,6 @@ body {
 
 .footer-wrapper {
   padding: 40px 0 0 0;
-  height: 350px;
 }
 
 .footer__contacts {
@@ -954,9 +953,50 @@ body {
         -ms-flex-align: center;
             align-items: center;
     gap: 60px;
+    padding: 80px 0 90px 0;
   }
   .donation__screen {
     margin: 0;
+  }
+  /* -----------------------------footer----------------------------1280--- */
+  .footer-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 65px 60px;
+    padding: 30px 0 0 0;
+  }
+  .footer__contacts {
+    margin: 0;
+  }
+  .footer__location {
+    width: 302px;
+    height: 234px;
+    margin: 0;
+  }
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+  .img__footer {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */
