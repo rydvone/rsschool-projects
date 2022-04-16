@@ -559,14 +559,6 @@ body {
   cursor: pointer;
 }
 
-.pet-food {
-  background-image: url("./../../assets/icons/icon-pet-food.svg");
-}
-
-.transportation {
-  background-image: url("./../../assets/icons/icon-transportation.svg");
-}
-
 /* -------------------------------help-----------------------------1280--- */
 .help {
   background-color: #ffffff;
@@ -832,6 +824,9 @@ body {
   display: block;
 }
 
+/* ----------------------------------------------------------------768--- */
+/* -------------------------------media----------------------------768--- */
+/* ----------------------------------------------------------------768--- */
 @media (max-width: 1279.98px) {
   /* -------------------pattern-------------------*/
   .header-wrapper, .start-screen-wrapper, .donation__credit-card, .footer-wrapper {
@@ -908,6 +903,93 @@ body {
     padding: 80px 0 100px 0;
   }
   /* -------------------------------pets-----------------------------768--- */
+  .pets {
+    background-color: #f6f6f6;
+  }
+  .pets-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 60px;
+    padding: 80px 0 100px 0;
+  }
+  .pets__title {
+    font-size: 35px;
+    line-height: 1.3em;
+    letter-spacing: 0.06em;
+    color: #545454;
+    text-align: center;
+  }
+  .slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 12px;
+  }
+  .wrapper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+  }
+  .slide:last-child {
+    display: none;
+  }
+  .slide__photo {
+    width: 270px;
+    height: 270px;
+  }
+  .slide__subtitle {
+    font-size: 20px;
+    line-height: 22.7px;
+    letter-spacing: 0.06em;
+    color: #545454;
+  }
+  .slide__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 17px;
+    line-height: 1.3em;
+    letter-spacing: 0.06em;
+    color: #292929;
+    background-color: transparent;
+    width: 187px;
+    height: 52px;
+    border: 2px solid #f1cdb3;
+    border-radius: 100px;
+    cursor: pointer;
+  }
   /* -------------------------------help-----------------------------768--- */
   .help-wrapper {
     -webkit-box-align: center;
@@ -952,8 +1034,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 60px;
-    padding: 80px 0 90px 0;
+    gap: 69px;
+    padding: 82px 0 97px 0;
   }
   .donation__screen {
     margin: 0;
@@ -975,28 +1057,7 @@ body {
     margin: 0;
   }
   .footer__location {
-    width: 302px;
-    height: 234px;
     margin: 0;
-  }
-  .contacts {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 20px;
-  }
-  .img__footer {
-    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */

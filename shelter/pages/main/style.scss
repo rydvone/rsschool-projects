@@ -528,14 +528,6 @@ body {
   cursor: pointer;
 }
 
-.pet-food {
-  background-image: url('./../../assets/icons/icon-pet-food.svg');
-}
-
-.transportation {
-  background-image: url('./../../assets/icons/icon-transportation.svg');
-}
-
 /* -------------------------------help-----------------------------1280--- */
 
 .help {
@@ -773,6 +765,10 @@ body {
 }
 
 
+/* ----------------------------------------------------------------768--- */
+/* -------------------------------media----------------------------768--- */
+/* ----------------------------------------------------------------768--- */
+
 @media (max-width: 1279.98px) {
 
   /* -------------------pattern-------------------*/
@@ -823,7 +819,6 @@ body {
 
   .start__screen {
     //  width: 100%;
-
   }
 
   .start__screen_img {
@@ -852,6 +847,78 @@ body {
 
   /* -------------------------------pets-----------------------------768--- */
 
+  .pets {
+    background-color: $color-light-l;
+  }
+  
+  .pets-wrapper {
+
+    align-items: center;
+    gap: 60px;
+    padding: 80px 0 100px 0;
+  }
+  
+  .pets__title {
+    font-size: $fz-section-title;
+    line-height: $lh-section-title;
+    letter-spacing: $ls-section-title;
+    color: $color-dark-l;
+    text-align: center;
+  }
+  
+  .slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .wrapper-slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .slide:last-child {
+    display: none;
+  }
+  
+  .slide__photo {
+    width: 270px;
+    height: 270px;
+  }
+  
+
+  
+  .slide__subtitle {
+    font-size: $fz-section-subtitle;
+    line-height: 22.7px;
+    letter-spacing: $ls-section-subtitle;
+    color: $color-dark-l;
+  }
+  
+  .slide__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: $fz-button;
+    line-height: $lh-button;
+    letter-spacing: $ls-button;
+    color: $color-dark-3xl;
+    background-color: transparent;
+    width: 187px;
+    height: 52px;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+
+
+  
   /* -------------------------------help-----------------------------768--- */
 
   .help-wrapper {
@@ -899,8 +966,8 @@ body {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    gap: 60px;
-    padding: 80px 0 90px 0;
+    gap: 69px;
+    padding: 82px 0 97px 0;
   }
 
   .donation__screen {
@@ -916,29 +983,11 @@ body {
     gap: 65px 60px;
     padding: 30px 0 0 0;
   }
-
   .footer__contacts {
-    // align-self: flex-start;
     margin: 0;
   }
-
   .footer__location {
-    width: 302px;
-    height: 234px;
     margin: 0;
-  }
-
-  .contacts {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-  }
-
-
-  .img__footer {
-    display: block;
   }
 
 }
