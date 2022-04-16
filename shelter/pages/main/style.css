@@ -1018,10 +1018,6 @@ body {
     letter-spacing: 0.06em;
     color: #545454;
   }
-  .help__logo {
-    width: 60px;
-    height: 60px;
-  }
   /* ------------------------------donatioin---------------------------768--- */
   .donation-wrapper {
     display: -webkit-box;
@@ -1034,7 +1030,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 69px;
+    gap: 60px;
     padding: 82px 0 97px 0;
   }
   .donation__screen {
@@ -1058,6 +1054,167 @@ body {
   }
   .footer__location {
     margin: 0;
+  }
+}
+
+/* ----------------------------------------------------------------320--- */
+/* -------------------------------media----------------------------320--- */
+/* ----------------------------------------------------------------320--- */
+@media (max-width: 768.98px) {
+  /* -------------------pattern-------------------*/
+  .wrapper {
+    padding: 0 10px;
+  }
+  .header-wrapper {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 43px;
+    padding: 30px 0;
+  }
+  .menu__nav {
+    display: none;
+  }
+  .wrapper-burger {
+    display: block;
+  }
+  /* -------------------------------pets-----------------------------320--- */
+  /* -------------------------------help-----------------------------768--- */
+  .help-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 58px;
+    padding: 80px 0 99px 0;
+  }
+  .help__title {
+    font-size: 35px;
+    line-height: 1.3em;
+    letter-spacing: 0.06em;
+    color: #545454;
+    text-align: center;
+  }
+  .help__item {
+    width: 130px;
+    height: 87px;
+    gap: 0px;
+  }
+  .help__subtitle {
+    font-size: 15px;
+    line-height: 1.1em;
+  }
+  .help__logo {
+    width: 20px;
+    height: 20px;
+  }
+  .pet-food {
+    background-image: url("./../../assets/images/icons/icon-pet-food.png");
+    width: 20px;
+    height: 20px;
+  }
+  .transportation {
+    background-image: url("./../../assets/images/icons/icon-transportation.png");
+  }
+  .toys {
+    background-image: url("./../../assets/images/icons/icon-toys.png");
+  }
+  .bowls-and-cups {
+    background-image: url("./../../assets/images/images/icons/icon-bowls-and-cups.png");
+  }
+  .shampoos {
+    background-image: url("./../../assets/images/icons/icon-shampoos.png");
+  }
+  .vitamins {
+    background-image: url("./../../assets/images/icons/icon-vitamins.png");
+  }
+  .medicines {
+    background-image: url("./../../assets/images/icons/icon-medicines.png");
+  }
+  .collars-leashes {
+    background-image: url("./../../assets/images/icons/icon-collars-leashes.png");
+  }
+  .sleeping-areas {
+    background-image: url("./../../assets/images/icons/icon-sleeping-area.png");
+  }
+  /* ---------------------------donatioin---------------------------320--- */
+  .donation-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 42px;
+    padding: 42px 0 41px 0;
+  }
+  .img__donation {
+    width: 260px;
+    height: 135.2px;
+  }
+  /* -----------------------------footer----------------------------320--- */
+  .footer-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 40px;
+    padding: 30px 0 0 0;
+  }
+  .footer__contacts {
+    width: 279px;
+    height: 208px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 0;
+  }
+  .footer__location {
+    width: 300px;
+    height: 222px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0;
+  }
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+  .contacts__title {
+    font-size: 25px;
+    text-align: center;
+    padding: 0 10px;
+  }
+  .contacts__subtitle {
+    font-size: 20px;
+    line-height: 1.3em;
+  }
+  .img__footer {
+    width: 260px;
+    height: 269px;
   }
 }
 /*# sourceMappingURL=style.css.map */

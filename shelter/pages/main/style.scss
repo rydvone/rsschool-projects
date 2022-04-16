@@ -42,12 +42,14 @@ $fz-section-title-320: 25px;
 $lh-section-title: 1.3em;
 $ls-section-title: 0.06em;
 $fz-section-subtitle: 20px;
-$fz-section-subtitle-320: 15px;
+$fz-section-subtitle-320: 20px;
 $lh-section-subtitle: 23px; // or 1.14em 
-$lh-section-subtitle-320: 1.1em;
+$lh-section-subtitle-320: 1.3em;
 $ls-section-subtitle: 0.06em;
 $fz-section-text: 15px;
 $lh-section-text: 1.6em;
+$fz-section-subtitle-help-320: 15px; 
+$lh-section-subtitle-help-320: 1.1em;
 
 $lh-modal-text: 13px;
 $lh-modal-text: 1.1em;
@@ -950,10 +952,7 @@ body {
     color: $color-dark-l;
   }
 
-  .help__logo {
-    width: 60px;
-    height: 60px;
-  }
+
 
 
 
@@ -963,7 +962,7 @@ body {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    gap: 69px;
+    gap: 60px;
     padding: 82px 0 97px 0;
   }
 
@@ -987,4 +986,175 @@ body {
     margin: 0;
   }
 
+}
+
+
+
+/* ----------------------------------------------------------------320--- */
+/* -------------------------------media----------------------------320--- */
+/* ----------------------------------------------------------------320--- */
+
+@media (max-width: 768.98px) {
+
+  /* -------------------pattern-------------------*/
+  .wrapper {
+    padding: 0 10px;
+  }
+
+  .header-wrapper {
+    justify-content: flex-start;
+    gap: 43px;
+    padding: 30px 0;
+  }
+
+  .menu__nav {
+    display: none;
+  }
+  .wrapper-burger {
+    display: block;
+  }
+
+ /* -------------------------------pets-----------------------------320--- */
+
+  /* -------------------------------help-----------------------------768--- */
+
+  .help-wrapper {
+    align-items: center;
+    gap: 58px;
+    padding: 80px 0 99px 0;
+  }
+
+  .help__title {
+    font-size: $fz-section-title;
+    line-height: $lh-section-title;
+    letter-spacing: $ls-section-title;
+    color: $color-dark-l;
+    text-align: center;
+  }
+
+  .help__items {
+    // gap: 55px 60px;
+  }
+
+  .help__item {
+    width: 130px;
+    height: 87px;
+    // align-items: center;
+    gap: 0px;
+  }
+
+  .help__subtitle {
+    font-size: $fz-section-subtitle-help-320;
+    line-height: $lh-section-subtitle-help-320;
+    // letter-spacing: $ls-section-subtitle;
+    // color: $color-dark-l;
+  }
+  .help__logo {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pet-food {
+    background-image: url('./../../assets/images/icons/icon-pet-food.png');
+    width: 20px;
+    height: 20px;
+  }
+  
+  .transportation {
+    background-image: url('./../../assets/images/icons/icon-transportation.png');
+  }
+  
+  .toys {
+    background-image: url('./../../assets/images/icons/icon-toys.png');
+  }
+  
+  .bowls-and-cups {
+    background-image: url('./../../assets/images/images/icons/icon-bowls-and-cups.png');
+  }
+  
+  .shampoos {
+    background-image: url('./../../assets/images/icons/icon-shampoos.png');
+  }
+  
+  .vitamins {
+    background-image: url('./../../assets/images/icons/icon-vitamins.png');
+  }
+  
+  .medicines {
+    background-image: url('./../../assets/images/icons/icon-medicines.png');
+  }
+  
+  .collars-leashes {
+    background-image: url('./../../assets/images/icons/icon-collars-leashes.png');
+  }
+  
+  .sleeping-areas {
+    background-image: url('./../../assets/images/icons/icon-sleeping-area.png');
+  }
+
+  /* ---------------------------donatioin---------------------------320--- */
+
+  .donation-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 42px;
+    padding: 42px 0 41px 0;
+  }
+
+  .img__donation {
+    width: 260px;
+    height: 135.2px;
+  }
+  
+  /* -----------------------------footer----------------------------320--- */
+
+  .footer-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 30px 0 0 0;
+  }
+
+  .footer__contacts {
+    width: 279px;
+    height: 208px;
+    align-items: center;
+    align-self: center;
+    margin: 0;
+  }
+  
+  .footer__location {
+    width: 300px;
+    height: 222px;
+    align-items: flex-start;
+    margin: 0;
+
+  }
+  
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .contacts__title {
+    font-size: $fz-section-title-320;
+    text-align: center;
+    padding: 0 10px;
+  }
+  
+  .contacts__subtitle {
+    font-size: $fz-section-subtitle-320;
+    line-height: $lh-section-subtitle-320;
+  }
+
+  .img__footer {
+    width: 260px;
+    height: 269px;
+  }
+  
 }
