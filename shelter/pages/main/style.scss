@@ -968,9 +968,9 @@ body {
   /* ----------------------------header----------------------------320--- */
   
   .header-wrapper {
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 43px;
-    // padding: 30px 0 60px 0;
+    padding: 30px 20px 60px 0;
   }
 
   .menu__nav {
@@ -1074,13 +1074,17 @@ body {
   .slider {
     flex-wrap: wrap;
     gap: 20px 80px;
+    // flex-grow: 2;
   }
   
   .wrapper-slide {
     order: -1;
     gap: 40px;
-    padding-left: max(40%);
-    padding-right: max(40%);
+    // flex-basis: 20px;
+    // padding: 0 auto;
+    // padding-left: calc(auto - 5px);
+    // padding-right: auto;
+    // flex-grow: 20;
   }
   
   .slide:nth-child(n+2) {
