@@ -1005,10 +1005,11 @@ body {
   }
   /* ----------------------------header----------------------------320--- */
   .header-wrapper {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 43px;
+    padding: 30px 20px 60px 0;
   }
   .menu__nav {
     display: none;
@@ -1093,8 +1094,6 @@ body {
         -ms-flex-order: -1;
             order: -1;
     gap: 40px;
-    padding-left: 40%;
-    padding-right: 40%;
   }
   .slide:nth-child(n+2) {
     display: none;
