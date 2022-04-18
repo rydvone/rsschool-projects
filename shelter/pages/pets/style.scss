@@ -569,9 +569,9 @@ body {
   }
 
   .header-wrapper {
-    justify-content: flex-start;
-    gap: 43px;
-    padding: 30px 0;
+    justify-content: space-between;
+    // gap: 43px;
+    padding: 30px 43px 30px 0;
   }
 
   .menu__nav {
@@ -601,6 +601,8 @@ body {
   }
 
   .slider {
+    flex-direction: column;
+    flex-wrap: nowrap;
     margin: 0;
   }
 
@@ -653,6 +655,9 @@ body {
     line-height: $lh-section-subtitle-320;
   }
 
+  .footer__screen {
+    margin: 0 10px;
+  }
   .img__footer {
     width: 260px;
     height: 269px;
