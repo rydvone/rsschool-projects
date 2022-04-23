@@ -17,7 +17,7 @@ const menuSwitch = () => {
   // add for shelter
   // headerLogo.classList.toggle('open');
   headerWrapper.classList.toggle('open');
-  body.classList.toggle('open-menu');
+  body.classList.toggle('active');
 }
 const outsideMenu = (e) => {
   if(!(menuNav.contains(e.target) || wrapperBurger.contains(e.target)) && wrapperBurger.classList.contains('open')) {

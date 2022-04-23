@@ -83,7 +83,7 @@ h6 {
   color: #ffffff;
 }
 
-.body.open-menu {
+.body.active {
   overflow-y: hidden;
 }
 
