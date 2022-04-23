@@ -79,8 +79,12 @@ h6 {
   font-size: inherit;
 }
 
-body {
+.body {
   color: #ffffff;
+}
+
+.body.open-menu {
+  overflow-y: hidden;
 }
 
 .body-block {
@@ -552,18 +556,78 @@ body {
 /* -------------------------------media----------------------------320--- */
 /* ----------------------------------------------------------------320--- */
 @media (max-width: 767.98px) {
-  /* -------------------pattern-------------------*/
+  /* -----------------------------pattern----------------------------320--- */
   .wrapper {
     padding: 0 10px;
   }
+  /* -----------------------------header-----------------------------320--- */
   .header-wrapper {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 30px 43px 30px 0;
   }
+  .header-wrapper.open {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    gap: 43px;
+  }
+  .header-wrapper.open .wrapper-header__logo {
+    z-index: 11;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+  }
   .menu__nav {
     display: none;
+  }
+  .menu__nav {
+    display: block;
+    background-color: #ffffff;
+    width: 320px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    -webkit-transform: translateX(110%);
+            transform: translateX(110%);
+    overflow-x: auto;
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+    padding: 248px 0 0;
+  }
+  .menu__nav.open {
+    display: block;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7);
+  }
+  .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+  }
+  .menu__item {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 32px;
+    line-height: 1.6em;
+    color: #cdcdcd;
   }
   .wrapper-burger {
     display: block;

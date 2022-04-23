@@ -19,11 +19,17 @@ const menuSwitch = () => {
   headerWrapper.classList.toggle('open');
   body.classList.toggle('open-menu');
 }
+const outsideMenu = (e) => {
+  if(!(menuNav.contains(e.target) || wrapperBurger.contains(e.target)) && wrapperBurger.classList.contains('open')) {
+    menuSwitch();
+   }
+}
 
 const burgerSubscribe = () => {
   wrapperBurger.addEventListener('click', menuSwitch);
   menuLink.forEach((el) => el.addEventListener('click', menuSwitch));
 
+  document.addEventListener('click', outsideMenu);
 
   // document.addEventListener('click', outsideEvtListener);
   
@@ -38,20 +44,6 @@ const burgerSubscribe = () => {
   //     // не забыть убрать слушатель событий (не для каждой имплементации требуется)
   //     // document.removeEventListener(outsideEvtListener);
   // }
-
-
-  document.addEventListener('click', function(e) {
-    // if(e.target.className != 'menu__nav' || e.target.className != 'menu__list open' || e.target.className != 'burger' ) { e.target != menuNav ||
-      if(menuNav.contains(e.target) || wrapperBurger.contains(e.target)) {
-      // menuSwitch();
-        // console.log(e.target);
-        console.log('something in');
-     } else {
-      console.log('something out');
-      menuSwitch();
-     }
-  });
-
 
   // document.addEventListener('click', function(e) {
   //   // if(e.target.className != 'menu__nav' || e.target.className != 'menu__list open' || e.target.className != 'burger' ) {
