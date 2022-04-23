@@ -1,3 +1,4 @@
+'use strict'
 import burgerSubscribe from './../../assets/src/components/burger.js';
 
 
@@ -9,4 +10,3 @@ window.onload = () => {
   console.log('Hello, friend!')
 
 }
-

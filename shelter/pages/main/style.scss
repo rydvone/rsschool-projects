@@ -125,8 +125,12 @@ button:focus {
   border: none;
 }
 
-body {
+.body {
   color: $color-white;
+}
+
+.body.open-menu {
+  overflow-y: hidden;
 }
 
 .body-block {
@@ -282,6 +286,8 @@ body {
   -o-transition: all $time-slow ease-in-out;
   transition: all $time-slow ease-in-out;
 }
+
+
 
 /* ----------------------------start-screen--------------------------1280--- */
 
@@ -933,8 +939,96 @@ body {
     padding: 30px 43px 60px 0;
   }
 
+  .header-wrapper.open {
+    justify-content: flex-end;
+    gap: 43px;
+    .wrapper-header__logo {
+      z-index: 11;
+      transition: $time-slow;
+    }
+  }
+
   .menu__nav {
     display: none;
+  }
+
+  // .wrapper-header__logo.open {
+  //   z-index: 11;
+  // }
+
+
+  // .menu__nav.open {
+  //   order: 3;
+  //   display: block;
+  //   transform: translateX(0);
+  //   // box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7);  
+  //   // background: rgba(41, 41, 41, 0.6);
+  //   box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.25);
+  // }
+
+  // .menu__nav {
+  //   background-color: $color-dark-3xl;
+  //   // width: 243px;
+  //   // height: 327px;
+
+  //   width: 320px;
+  //   height: 100vh;
+  //   position: fixed;
+  //   top: 0;
+  //   right: 0;
+  //   z-index: 10;
+  //   transform: translateX(110%);
+  //   overflow-x: auto;
+  //   transition: transform $time-fast ease-in-out;
+
+
+  //   padding: 30px 10px;
+  // }
+
+
+
+  .menu__nav {
+    display: block;
+    background-color: $color-dark-3xl;
+    width: 320px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    transform: translateX(110%);
+    overflow-x: auto;
+    transition: transform $time-fast ease-in-out;
+
+    padding: 248px 0 0;
+    
+  }
+
+  .menu__nav.open {
+    display: block;
+    transform: translateX(0);
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7);  
+  }
+
+
+
+
+
+
+  .menu__list {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+  }
+  .menu__item {
+    width: max-content;
+    font-size: $fz-burger-title-320;
+    line-height: $lh-burger-title;
+    color: $color-dark-s;
   }
 
   .wrapper-burger {
