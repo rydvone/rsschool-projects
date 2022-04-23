@@ -128,14 +128,24 @@ button:focus {
   border: none;
 }
 
+.scroll-disabled {
+  position: fixed;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+
 .body {
   color: $color-white;
 }
 
 .body.active {
   overflow-y: hidden;
-  // .wrapper {
-  //   padding: 0 25px 0 10px;
+  // .header-wrapper {
+  //   padding-right: 25px;
+  // }
+  // .start-screen-wrapper {
+  //   padding-right: 25px;
   // }
 }
 
@@ -412,6 +422,18 @@ button:focus {
   gap: 53px;
 }
 
+.wrapper-slides {
+  width: 990px;
+  height: 435px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  position: relative;
+  left: -990px;
+}
+
 .wrapper-slide {
   display: flex;
   flex-direction: row;
@@ -539,6 +561,20 @@ button:focus {
   border-radius: 100px;
   cursor: pointer;
 }
+
+
+@keyframes move-right {
+  from {left: -990px;}
+  to {left: 0px;}
+}
+.move-to-right {
+  animation-name:  move-right;
+  animation-duration: 2s;
+  
+}
+
+
+
 
 /* -------------------------------help-----------------------------1280--- */
 
@@ -782,16 +818,18 @@ button:focus {
 .popup-block.open {
   display: block;
 }
+
 .popup-block {
   display: none;
   // display: block;
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color:rgba(41, 41, 41, 0.6);
+  background-color: rgba(41, 41, 41, 0.6);
   top: 0;
   left: 0;
 }
+
 .popup-wrapper {
   min-height: 100%;
   display: flex;
@@ -799,17 +837,15 @@ button:focus {
   align-items: center;
 }
 
-
 .popup__button-close {
-  position: relative;
+  // display: none;
+  position: absolute;
   top: -52px;
   right: -43px;
 
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  // line-height: 115%;
-  // letter-spacing: 0.06em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -825,34 +861,39 @@ button:focus {
 
   &:hover {
     background-color: $color-primary-light;
-    border: none;
+    border: 2px solid $color-primary-light;
   }
 }
 
-.popup__screen {  
-  width: 350px;
-  height: 350px;
-  border-radius: 9px 0px 0px 9px;
-  .img__about {
-  display: block;
-  width: 260px;
-  height: 353.6px;
-}
-}
 .popup__card {
-  width: 630px;
-  height: 350px;
+  width: 900px;
+  height: 500px;
+
   @extend %flex-row-sb;
+  position: relative;
+
   color: $color-black;
   background-color: $color-light-xl;
   border-radius: 9px;
 }
 
+.popup__screen {
+  width: 500px;
+  height: 500px;
+  border-radius: 9px 0px 0px 9px;
+
+  // background-image: url('./../../assets/images/main-1280/svg/icon-email.svg');
+  .img__popup {
+    display: block;
+    width: 500px;
+    height: 500px;
+  }
+}
+
 .popup__content {
-  width: 630px;
-  height: 350px;
   @extend %flex-col-sb;
-  padding: 10px 9px 0 11px;
+  padding: 50px 20px 0 29px;
+  overflow-y: auto;
 }
 
 .popup__name {
@@ -860,23 +901,20 @@ button:focus {
   line-height: $lh-section-title;
   letter-spacing: $ls-section-title;
   padding: 0 0 10px;
-  // text-align: justify;
 }
 
 .popup__type {
   font-size: $fz-modal-type;
   line-height: $lh-modal-type;
   letter-spacing: $ls-modal-type;
-  padding: 0 0 20px;
-  // text-align: justify;
+  padding: 0 0 40px;
 }
 
 .popup__description {
-  font-size: $fz-modal-text;
-  line-height: $lh-modal-text;
-  letter-spacing: $ls-modal-text;
-  padding: 0 0 20px;
-  // text-align: justify;
+  font-size: $fz-modal-list;
+  line-height: $lh-modal-list;
+  letter-spacing: $ls-modal-list;
+  padding: 0 0 40px;
 }
 
 .popup__list {
@@ -888,8 +926,18 @@ button:focus {
   .popup__item_bold {
     font-weight: 700;
   }
+}
 
-  // text-align: justify;
+.popup__item {
+
+  // list-style: disc;
+  &:before {
+    color: $color-primary;
+    content: "●";
+    padding-right: 10px;
+
+  }
+
 }
 
 /* ----------------------------------------------------------------768--- */
@@ -967,6 +1015,10 @@ button:focus {
     gap: 12px;
   }
 
+  .wrapper-slides {
+    width: 580px;
+  }
+
   .wrapper-slide {
     gap: 40px;
   }
@@ -1020,7 +1072,7 @@ button:focus {
     margin: 0;
   }
 
-  /* -----------------------------footer----------------------------768--- */
+  /* -------------------------------footer-----------------------------768--- */
 
   .footer-wrapper {
     display: flex;
@@ -1038,6 +1090,65 @@ button:focus {
     margin: 0;
   }
 
+
+  /* -------------------------------popup-----------------------------768--- */
+  .popup__card {
+    width: 630px;
+    height: 350px;
+  }
+
+  .popup__screen {
+    width: 350px;
+    height: 350px;
+
+    // background-image: url('./../../assets/images/main-1280/svg/icon-email.svg');
+    .img__popup {
+      display: block;
+      width: 350px;
+      height: 350px;
+    }
+  }
+
+  .popup__content {
+    padding: 10px 9px 0 11px;
+  }
+
+  .popup__name {
+    font-size: $fz-section-title;
+    line-height: $lh-section-title;
+    letter-spacing: $ls-section-title;
+    padding: 0 0 10px;
+    // text-align: justify;
+  }
+
+  .popup__type {
+    font-size: $fz-modal-type;
+    line-height: $lh-modal-type;
+    letter-spacing: $ls-modal-type;
+    padding: 0 0 20px;
+    // text-align: justify;
+  }
+
+  .popup__description {
+    font-size: $fz-modal-text;
+    line-height: $lh-modal-text;
+    letter-spacing: $ls-modal-text;
+    padding: 0 0 20px;
+    // text-align: justify;
+  }
+
+  .popup__list {
+    font-size: $fz-modal-list;
+    line-height: $lh-modal-list;
+    letter-spacing: $ls-modal-list;
+    padding: 0 0 20px;
+
+    .popup__item_bold {
+      font-weight: 700;
+    }
+
+    // text-align: justify;
+  }
 }
 
 
@@ -1063,9 +1174,10 @@ button:focus {
   .header-wrapper.open {
     justify-content: flex-end;
     gap: 43px;
+    transition: $time-slow;
     .wrapper-header__logo {
       z-index: 11;
-      transition: $time-slow;
+      
     }
   }
 
@@ -1122,13 +1234,13 @@ button:focus {
     transition: transform $time-fast ease-in-out;
 
     padding: 248px 0 0;
-    
+
   }
 
   .menu__nav.open {
     display: block;
     transform: translateX(0);
-    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7);  
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7);
   }
 
   .menu__list {
@@ -1139,6 +1251,7 @@ button:focus {
     margin: 0;
     padding: 0;
   }
+
   .menu__item {
     width: max-content;
     font-size: $fz-burger-title-320;
@@ -1240,8 +1353,12 @@ button:focus {
     gap: 20px 80px;
   }
 
-  .wrapper-slide {
+  .wrapper-slides {
     order: -1;
+    width: 270px;
+  }
+
+  .wrapper-slide {  
     gap: 40px;
   }
 
@@ -1280,6 +1397,7 @@ button:focus {
     height: 87px;
     gap: 21px;
   }
+
   .help__item:last-child {
     @media (max-width: 320px) {
       margin: 0 auto 0 0;
@@ -1397,6 +1515,39 @@ button:focus {
   .img__footer {
     width: 260px;
     height: 269px;
+  }
+
+
+
+  /* -------------------------------popup-----------------------------768--- */
+  .popup__card {
+    width: 240px;
+    height: 341px;
+  }
+
+  .popup__button-close {
+    top: -52px;
+    right: -33px;
+  }
+  .popup__screen {
+    display: none;
+  }
+
+  .popup__content {
+    padding: 10px;
+  }
+
+  .popup__name {
+    text-align: center;
+  }
+
+  .popup__type {
+    text-align: center;
+  }
+
+  .popup__description {
+    padding: 0 0 24px;
+    text-align: justify;
   }
 
 }

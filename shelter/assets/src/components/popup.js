@@ -1,27 +1,35 @@
 'use strict'
-const buttonSlide = document.querySelector('.slide')
+const slide = [...document.querySelectorAll('.slide')];
 const buttonClose = document.querySelector('.popup__button-close');
 const body = document.querySelector('.body');
 const popupBlock = document.querySelector('.popup-block');
 const popupCard = document.querySelector('.popup__card'); 
 
+
 const popupSwitch = () => {
   console.log('hellooooooooo');
-  popupBlock.classList.toggle('open')
+  popupBlock.classList.toggle('open');
   body.classList.toggle('active');
+
+  // if (popupBlock.contains('open')) {
+  //   disableScroll();
+  // }
+
 }
+// e.target == popupBlock || !(popupCard.contains(e.target))
 const outsidePopup = (e) => {
-  if(e.target == popupBlock && !(popupCard.contains(e.target))) {
+  if(!(popupCard.contains(e.target))) {
+    console.log('block shadow');
     popupSwitch();
    }
 }
 
 const popupSubscribe = () => {
-  buttonSlide.addEventListener('click', popupSwitch);
   buttonClose.addEventListener('click', popupSwitch);
-  // menuLink.forEach((el) => el.addEventListener('click', menuSwitch));
+  slide.forEach((el) => el.addEventListener('click', popupSwitch));
 
-  document.addEventListener('click', outsidePopup);
+  // popupCard.addEventListener('click', popupSwitch);
+  // document.addEventListener('click', outsidePopup);
 
 }
 

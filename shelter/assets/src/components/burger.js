@@ -14,8 +14,8 @@ const menuSwitch = () => {
   wrapperBurger.classList.toggle('open');
   menuNav.classList.toggle('open');
 
-  // add for shelter
-  // headerLogo.classList.toggle('open');
+
+  headerLogo.classList.toggle('open');
   headerWrapper.classList.toggle('open');
   body.classList.toggle('active');
 }
@@ -25,11 +25,23 @@ const outsideMenu = (e) => {
    }
 }
 
+
+
+
+
+
+
+
 const burgerSubscribe = () => {
   wrapperBurger.addEventListener('click', menuSwitch);
   menuLink.forEach((el) => el.addEventListener('click', menuSwitch));
 
   document.addEventListener('click', outsideMenu);
+
+
+
+
+
 
   // document.addEventListener('click', outsideEvtListener);
   
