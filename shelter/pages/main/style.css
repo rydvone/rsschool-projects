@@ -979,7 +979,7 @@ button:focus {
 .popup__screen {
   width: 500px;
   height: 500px;
-  border-radius: 9px 0px 0px 9px;
+  border-radius: 9px;
 }
 
 .popup__screen .img__popup {
@@ -1617,6 +1617,9 @@ button:focus {
     right: -33px;
   }
   .popup__screen {
+    display: none;
+  }
+  .img__popup {
     display: none;
   }
   .popup__content {
