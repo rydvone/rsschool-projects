@@ -586,7 +586,7 @@ button:focus {
   cursor: pointer;
 }
 
-@-webkit-keyframes move-right {
+@-webkit-keyframes move-left {
   from {
     left: -990px;
   }
@@ -595,12 +595,37 @@ button:focus {
   }
 }
 
-@keyframes move-right {
+@keyframes move-left {
   from {
     left: -990px;
   }
   to {
     left: 0px;
+  }
+}
+
+.move-to-left {
+  -webkit-animation-name: move-left;
+          animation-name: move-left;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@-webkit-keyframes move-right {
+  from {
+    left: -990px;
+  }
+  to {
+    left: -1980px;
+  }
+}
+
+@keyframes move-right {
+  from {
+    left: -990px;
+  }
+  to {
+    left: -1980px;
   }
 }
 

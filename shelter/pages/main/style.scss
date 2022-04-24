@@ -563,17 +563,33 @@ button:focus {
 }
 
 
+@keyframes move-left {
+  from {
+    left: -990px;
+  }
+  to {
+    left: 0px;
+  }
+}
+.move-to-left {
+  animation-name:  move-left;
+  animation-duration: 2s;
+
+}
+
 @keyframes move-right {
-  from {left: -990px;}
-  to {left: 0px;}
+  from {
+    left: -990px;
+  }
+  to {
+    left: -1980px;
+  }
 }
 .move-to-right {
   animation-name:  move-right;
   animation-duration: 2s;
   
 }
-
-
 
 
 /* -------------------------------help-----------------------------1280--- */
