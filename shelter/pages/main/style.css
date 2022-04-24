@@ -923,11 +923,6 @@ button:focus {
   left: 0;
 }
 
-.popup-block:hover .popup__button-close {
-  background-color: #fddcc4;
-  border: 2px solid #fddcc4;
-}
-
 .popup-wrapper {
   min-height: 100%;
   display: -webkit-box;
@@ -984,7 +979,7 @@ button:focus {
 .popup__screen {
   width: 500px;
   height: 500px;
-  border-radius: 9px 0px 0px 9px;
+  border-radius: 9px;
 }
 
 .popup__screen .img__popup {
@@ -1622,6 +1617,9 @@ button:focus {
     right: -33px;
   }
   .popup__screen {
+    display: none;
+  }
+  .img__popup {
     display: none;
   }
   .popup__content {
