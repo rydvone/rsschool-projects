@@ -923,6 +923,11 @@ button:focus {
   left: 0;
 }
 
+.popup-block:hover .popup__button-close {
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
+}
+
 .popup-wrapper {
   min-height: 100%;
   display: -webkit-box;
