@@ -14,7 +14,7 @@ window.onload = () => {
 
 
   console.log("Hello, friend!");
-  console.log(dataJSON[1].name);
+
 
 
 

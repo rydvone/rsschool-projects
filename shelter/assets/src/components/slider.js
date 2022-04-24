@@ -72,12 +72,6 @@ function sliderSubscribe(dataJSON) {
   function findRandom(checkActive) {
     let arrRandomInner = [];
     let rndNum;
-    // if (arrArg.length !== 0) {
-    // rndNum = Math.floor(Math.random() * 8);
-    // while (arrArg.indexOf(rndNum) !== -1) {
-    //   rndNum = Math.floor(Math.random() * 8);
-    // }
-    // arrRandomInner.push(rndNum);
     if (checkActive == false) {
       rndNum = Math.floor(Math.random() * 8);
       while (arrNumPetsActive.indexOf(rndNum) !== -1) {
@@ -85,14 +79,11 @@ function sliderSubscribe(dataJSON) {
       }
       arrRandomInner.push(rndNum);
     }
-    // if (arrArg.length === 0) {
     if (checkActive == true) {
       rndNum = Math.floor(Math.random() * 8);
       arrRandomInner.push(rndNum);
     }
 
-    // let rndNum = Math.floor(Math.random() * 8);
-    // arrRandomInner.push(rndNum);
     for (let i = 0; i < numSlide - 1; i++) {
       rndNum = Math.floor(Math.random() * 8);
       while (

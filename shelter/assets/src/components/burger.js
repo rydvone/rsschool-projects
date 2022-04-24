@@ -19,74 +19,27 @@ const menuSwitch = () => {
   headerWrapper.classList.toggle('open');
   body.classList.toggle('active');
 }
-const outsideMenu = (e) => {
-  if(!(menuNav.contains(e.target) || wrapperBurger.contains(e.target)) && wrapperBurger.classList.contains('open')) {
-    menuSwitch();
-   }
+
+const menuClose = () => {
+  wrapperBurger.classList.remove('open');
+  menuNav.classList.remove('open');
+
+  headerLogo.classList.remove('open');
+  headerWrapper.classList.remove('open');
+  body.classList.remove('active');
 }
 
-
-
-// const {body, documentElement } = document;
-// let { scrollTop } = document.documentElement;
-
-// function disableScroll() {
-//   scrollTop = documentElement.scrollTop;
-//   body.style.top = `-${scrollTop}px`;
-//   body.classList.add("scroll-disabled");
-// }
-
-// function enableScroll() {
-//   body.classList.remove("scroll-disabled");
-//   documentElement.style.scrollBehavior = "auto";
-//   documentElement.scrollTop = scrollTop;
-//   documentElement.style.removeProperty("scroll-behavior");
-//   body.style.removeProperty("top");
-// }
-
-// document.getElementById('enable').addEventListener('click', enableScroll);
-// document.getElementById('disable').addEventListener('click', disableScroll);
-
-
-
-
+const outsideMenu = (e) => {
+  if (!(menuNav.contains(e.target) || wrapperBurger.contains(e.target)) && wrapperBurger.classList.contains('open')) {
+    menuSwitch();
+  }
+}
 
 
 const burgerSubscribe = () => {
   wrapperBurger.addEventListener('click', menuSwitch);
-  menuLink.forEach((el) => el.addEventListener('click', menuSwitch));
-
+  menuLink.forEach((el) => el.addEventListener('click', menuClose));
   document.addEventListener('click', outsideMenu);
-
-
-
-
-
-
-  // document.addEventListener('click', outsideEvtListener);
-  
-  // function outsideEvtListener(e) {
-  //     if (e.target === menuNav || menuNav.contains(e.target)) {
-  //         // клик внутри
-  //         return;
-  //     }
-  //     menuSwitch();
-  //     // код для закрытия меню, например el.classList.add('hidden')
-     
-  //     // не забыть убрать слушатель событий (не для каждой имплементации требуется)
-  //     // document.removeEventListener(outsideEvtListener);
-  // }
-
-  // document.addEventListener('click', function(e) {
-  //   // if(e.target.className != 'menu__nav' || e.target.className != 'menu__list open' || e.target.className != 'burger' ) {
-  //     if(e.target.className != 'menu__nav open') {
-  //     // menuSwitch();
-  //       console.log(e.target);
-  //    }
-  // });
-
-
-
 }
 
 export default burgerSubscribe;
