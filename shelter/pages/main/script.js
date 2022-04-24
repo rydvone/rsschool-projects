@@ -1,24 +1,92 @@
-console.log(`
-Общий бал = 100
+import burgerSubscribe from "./../../assets/src/components/burger.js";
+// import popupSubscribe from "./../../assets/src/components/popup.js";
+import dataJSONfile from "./../../assets/src/components/data.js";
+import sliderSubscribe from "./../../assets/src/components/slider.js";
 
-1) В браузере Google Chrome при плавном изменении ширины окна от максимума до 320px включительно на странице main не появляется горизонтальная полоса прокрутки, контент не выходит за боковые границы окна
 
-2) В браузере Google Chrome при плавном изменении ширины окна от максимума до 320px включительно на странице our pets не появляется горизонтальная полоса прокрутки, контент не выходит за боковые границы окна
+// wait why all pages html + css will be load
+window.onload = () => {
+  const dataJSON = dataJSONfile;
+  // components
+  burgerSubscribe();
+  // popupSubscribe();
+  sliderSubscribe(dataJSON);
 
-3) В браузере Mozilla Firefox при плавном изменении ширины окна от максимума до 320px включительно на странице main: 1) не появляется горизонтальная полоса прокрутки, контент не выходит за боковые границы окна или 2) не появляются проблемы в верстке, отличные от тех, что были в Google Chrome. При нарушении первого пункта вычитается -10 баллов. При выполнении первого пункта и нарушении второго пункта вычитается -5 баллов за каждую уникальную ошибку, но не более -10 баллов
 
-4) В браузере Mozilla Firefox при плавном изменении ширины окна от максимума до 320px включительно на странице our pets: 1) не появляется горизонтальная полоса прокрутки, контент не выходит за боковые границы окна или 2) не появляются проблемы в верстке, отличные от тех, что были в Google Chrome. При нарушении первого пункта вычитается -10 баллов. При выполнении первого пункта и нарушении второго пункта вычитается -5 баллов за каждую уникальную ошибку, но не более -10 баллов
+  console.log("Hello, friend!");
 
-5) На странице main при ширине страницы большей 1280px выполняются необходимые условия, нет нарушений отступов или размеров при проверке соответствию макету main-1280 на ширине экрана 1280px
+  // const slide = [...document.querySelectorAll('.slide')];
+  // slide.forEach((el) => el.addEventListener('click', (e) => {
+  //   console.log(e.currentTarget);
+  // }));
 
-6) На странице our pets при ширине страницы большей 1280px выполняются необходимые условия, нет нарушений отступов или размеров при проверке соответствию макету our-pets-1280 на ширине экрана 1280px
+  const slide = [...document.querySelectorAll('.slide')];
+  const buttonClose = document.querySelector('.popup__button-close');
+  const body = document.querySelector('.body');
+  const popupBlock = document.querySelector('.popup-block');
+  const popupCard = document.querySelector('.popup__card'); 
+  const imgAbout = document.querySelector('.img__about'); 
+  let namePets = '';
+  
+  const popupSwitch = (e) => {
+    popupBlock.classList.toggle('open');
+    body.classList.toggle('active');
+    // console.log(e.currentTarget.textContent);
+    // let lengthNamePets = e.currentTarget.textContent.length;
+    // namePets = e.currentTarget.textContent.slice(0, (lengthNamePets - 10));
+    // console.log(namePets);
+  }
+  
+  
+  const outsidePopup = (e) => {
+    if(!(popupCard.contains(e.target))) {
+      console.log('block shadow');
+      popupSwitch();
+     }
+  }
+  
+    buttonClose.addEventListener('click', popupSwitch);
+    slide.forEach((el) => el.addEventListener('click', popupSwitch));
+  
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.slide') != null) {
+        popupSwitch(e);
+      }
+    })
+    
+    // popupCard.addEventListener('click', popupSwitch);
+    // document.addEventListener('click', outsidePopup);
+    // e.target.closest('.popup')
 
-7) На странице main для ширины страницы 768px <= width < 1280px выполняются необходимые условия, нет нарушений отступов или размеров при проверке соответствию макету main-768 на ширине экрана 768px
+  
 
-8) На странице our pets для ширины страницы 768px <= width < 1280px выполняются необходимые условия, нет нарушений отступов или размеров при проверке соответствию макету our-pets-768 на ширине экрана 768px
 
-9) На странице main для ширины страницы 320px <= width < 768px выполняются необходимые условия, нет нарушений отступов или размеров при проверке соответствию макету main-320 на ширине экрана 320px
 
-10) На странице our pets для ширины страницы 320px <= width < 768px выполняются необходимые условия, нет нарушений отступов или размеров при проверке соответствию макету our-pets-320 на ширине экрана 320px
 
-`);
+  // stackoverflow code to disable scroll
+  // const { body, documentElement } = document;
+  // let { scrollTop } = document.documentElement;
+
+  // function disableScroll() {
+  //   scrollTop = documentElement.scrollTop;
+  //   body.style.top = `-${scrollTop}px`;
+  //   body.classList.add("scroll-disabled");
+  // }
+
+  // function enableScroll() {
+  //   body.classList.remove("scroll-disabled");
+  //   documentElement.scrollTop = scrollTop;
+  //   body.style.removeProperty("top");
+  // }
+  // // If you are using scroll-behavior: smooth on html, you also need to modify the enableScroll function like this:
+
+  // function enableScroll() {
+  //   body.classList.remove("scroll-disabled");
+  //   // Set "scroll-behavior" to "auto"
+  //   documentElement.style.scrollBehavior = "auto";
+  //   documentElement.scrollTop = scrollTop;
+  //   // Remove "scroll-behavior: auto" after restoring scroll position
+  //   documentElement.style.removeProperty("scroll-behavior");
+  //   body.style.removeProperty("top");
+  // }
+};
