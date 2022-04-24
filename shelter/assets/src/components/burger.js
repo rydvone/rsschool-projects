@@ -27,6 +27,26 @@ const outsideMenu = (e) => {
 
 
 
+// const {body, documentElement } = document;
+// let { scrollTop } = document.documentElement;
+
+// function disableScroll() {
+//   scrollTop = documentElement.scrollTop;
+//   body.style.top = `-${scrollTop}px`;
+//   body.classList.add("scroll-disabled");
+// }
+
+// function enableScroll() {
+//   body.classList.remove("scroll-disabled");
+//   documentElement.style.scrollBehavior = "auto";
+//   documentElement.scrollTop = scrollTop;
+//   documentElement.style.removeProperty("scroll-behavior");
+//   body.style.removeProperty("top");
+// }
+
+// document.getElementById('enable').addEventListener('click', enableScroll);
+// document.getElementById('disable').addEventListener('click', disableScroll);
+
 
 
 

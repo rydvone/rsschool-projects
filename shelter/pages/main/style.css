@@ -461,6 +461,12 @@ button:focus {
   height: 270px;
 }
 
+.img__slide {
+  display: block;
+  width: 270px;
+  height: 270px;
+}
+
 .pets-katrine {
   background-image: url("./../../assets/images/pets/pets-katrine.png");
 }
@@ -1098,6 +1104,9 @@ button:focus {
   .wrapper-slides {
     width: 580px;
   }
+  .slides {
+    left: -580px;
+  }
   .wrapper-slide {
     gap: 40px;
   }
@@ -1110,6 +1119,38 @@ button:focus {
   }
   .slide-control {
     margin: 2px 0 0 0;
+  }
+  @-webkit-keyframes move-left {
+    from {
+      left: -580px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  @keyframes move-left {
+    from {
+      left: -580px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  @-webkit-keyframes move-right {
+    from {
+      left: -580px;
+    }
+    to {
+      left: -1160px;
+    }
+  }
+  @keyframes move-right {
+    from {
+      left: -580px;
+    }
+    to {
+      left: -1160px;
+    }
   }
   /* -------------------------------help-----------------------------768--- */
   .help-wrapper {
@@ -1371,6 +1412,9 @@ button:focus {
             order: -1;
     width: 270px;
   }
+  .slides {
+    left: -270px;
+  }
   .wrapper-slide {
     gap: 40px;
   }
@@ -1380,6 +1424,38 @@ button:focus {
   .slide__photo {
     width: 270px;
     height: 270px;
+  }
+  @-webkit-keyframes move-left {
+    from {
+      left: -270px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  @keyframes move-left {
+    from {
+      left: -270px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  @-webkit-keyframes move-right {
+    from {
+      left: -270px;
+    }
+    to {
+      left: -540px;
+    }
+  }
+  @keyframes move-right {
+    from {
+      left: -270px;
+    }
+    to {
+      left: -540px;
+    }
   }
   /* -------------------------------help----------------------------320--- */
   .help-wrapper {

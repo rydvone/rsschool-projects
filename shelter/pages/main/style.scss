@@ -470,6 +470,11 @@ button:focus {
   width: 270px;
   height: 270px;
 }
+.img__slide {
+  display: block;
+  width: 270px;
+  height: 270px;
+}
 
 .pets-katrine {
   background-image: url('./../../assets/images/pets/pets-katrine.png');
@@ -1034,6 +1039,9 @@ button:focus {
   .wrapper-slides {
     width: 580px;
   }
+  .slides {
+    left: -580px;
+  }
 
   .wrapper-slide {
     gap: 40px;
@@ -1051,6 +1059,24 @@ button:focus {
   .slide-control {
     margin: 2px 0 0 0;
   }
+
+  @keyframes move-left {
+    from {
+      left: -580px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  @keyframes move-right {
+    from {
+      left: -580px;
+    }
+    to {
+      left: -1160px;
+    }
+  }
+
 
   /* -------------------------------help-----------------------------768--- */
 
@@ -1162,8 +1188,6 @@ button:focus {
     .popup__item_bold {
       font-weight: 700;
     }
-
-    // text-align: justify;
   }
 }
 
@@ -1372,6 +1396,10 @@ button:focus {
   .wrapper-slides {
     order: -1;
     width: 270px;
+    // margin: 0 auto;
+  }
+  .slides {
+    left: -270px;
   }
 
   .wrapper-slide {  
@@ -1387,6 +1415,22 @@ button:focus {
     height: 270px;
   }
 
+  @keyframes move-left {
+    from {
+      left: -270px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  @keyframes move-right {
+    from {
+      left: -270px;
+    }
+    to {
+      left: -540px;
+    }
+  }
 
   /* -------------------------------help----------------------------320--- */
 
