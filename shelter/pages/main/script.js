@@ -35,8 +35,7 @@ window.onload = () => {
     // let lengthNamePets = e.currentTarget.textContent.length;
     // namePets = e.currentTarget.textContent.slice(0, (lengthNamePets - 10));
     // console.log(namePets);
-  }
-  
+  }  
   
   const outsidePopup = (e) => {
     if(!(popupCard.contains(e.target))) {
