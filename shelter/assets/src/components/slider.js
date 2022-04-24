@@ -110,7 +110,7 @@ function sliderSubscribe(dataJSON) {
 
       const tagImgSlide1 = document.createElement("img");
       tagImgSlide1.classList.add("img__slide");
-      tagImgSlide1.src = "./../../assets/images/pets/pets-" + namePets + ".png";
+      tagImgSlide1.src = "./../../assets/images/pets/" + namePets.toLowerCase() + ".png";
       tagImgSlide1.alt = "your best friends";
 
       const tagDivSubtitleSlide1 = document.createElement("div");
