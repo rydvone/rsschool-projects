@@ -52,7 +52,6 @@ window.onload = () => {
       let some = e.target.closest('.slide');
       // console.log(some.innerHTML);
       let lengthNamePets = some.textContent.length;
-      console.log(lengthNamePets);
       namePets = some.textContent.slice(0, (lengthNamePets - 10));
       console.log(namePets);
 

@@ -463,6 +463,30 @@ h6 {
   display: block;
 }
 
+.popup-block:hover {
+  cursor: pointer;
+}
+
+.popup-block:hover .popup__button-close {
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
+}
+
+.popup-block:hover .popup__card:hover {
+  cursor: auto;
+}
+
+.popup-block:hover .popup__card:hover .popup__button-close {
+  background-color: transparent;
+  border: 2px solid #f1cdb3;
+}
+
+.popup-block:hover .popup__card:hover .popup__button-close:hover {
+  cursor: pointer;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
+}
+
 .popup-block {
   display: none;
   position: fixed;
@@ -509,12 +533,6 @@ h6 {
   color: #292929;
   background-color: transparent;
   border: 2px solid #f1cdb3;
-  cursor: pointer;
-}
-
-.popup__button-close:hover {
-  background-color: #fddcc4;
-  border: 2px solid #fddcc4;
 }
 
 .popup__card {
@@ -526,16 +544,11 @@ h6 {
   border-radius: 9px;
 }
 
-.popup__screen {
-  width: 500px;
-  height: 500px;
-  border-radius: 9px;
-}
-
 .img__popup {
   display: block;
   width: 500px;
   height: 500px;
+  border-radius: 9px 9px;
 }
 
 .popup__content {
@@ -694,6 +707,46 @@ h6 {
   }
   .footer__location {
     margin: 0;
+  }
+  /* -------------------------------popup-----------------------------768--- */
+  .popup__card {
+    width: 630px;
+    height: 350px;
+  }
+  .img__popup {
+    display: block;
+    width: 350px;
+    height: 350px;
+  }
+  .popup__content {
+    padding: 10px 9px 0 11px;
+  }
+  .popup__name {
+    font-size: 35px;
+    line-height: 1.3em;
+    letter-spacing: 0.06em;
+    padding: 0 0 10px;
+  }
+  .popup__type {
+    font-size: 20px;
+    line-height: 1.15em;
+    letter-spacing: 0.06em;
+    padding: 0 0 20px;
+  }
+  .popup__description {
+    font-size: 13px;
+    line-height: 1.1em;
+    letter-spacing: 0.06em;
+    padding: 0 0 20px;
+  }
+  .popup__list {
+    font-size: 15px;
+    line-height: 1.1em;
+    letter-spacing: 0.06em;
+    padding: 0 0 20px;
+  }
+  .popup__list .popup__item_bold {
+    font-weight: 700;
   }
 }
 
@@ -867,6 +920,34 @@ h6 {
   .img__footer {
     width: 260px;
     height: 269px;
+  }
+  /* -------------------------------popup-----------------------------768--- */
+  .popup__card {
+    width: 240px;
+    height: 341px;
+  }
+  .popup__button-close {
+    top: -52px;
+    right: -33px;
+  }
+  .popup__screen {
+    display: none;
+  }
+  .img__popup {
+    display: none;
+  }
+  .popup__content {
+    padding: 10px;
+  }
+  .popup__name {
+    text-align: center;
+  }
+  .popup__type {
+    text-align: center;
+  }
+  .popup__description {
+    padding: 0 0 24px;
+    text-align: justify;
   }
 }
 /*# sourceMappingURL=style.css.map */

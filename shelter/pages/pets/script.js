@@ -1,4 +1,5 @@
 'use strict'
+/* -------------------pets-script--------------- */
 import burgerSubscribe from '../../assets/src/components/burger.js';
 import dataJSONfile from "../../assets/src/components/data.js";
 import paginationSubscribe from "./../../assets/src/components/pagination.js";
@@ -31,12 +32,6 @@ window.onload = () => {
   const popupClose = (e) => {
     popupBlock.classList.remove('open');
     body.classList.remove('active');
-  }
-  const outsidePopup = (e) => {
-    if (!(popupCard.contains(e.target))) {
-      console.log('block shadow');
-      popupSwitch();
-    }
   }
 
   buttonClose.addEventListener('click', popupClose);
