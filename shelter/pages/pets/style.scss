@@ -331,6 +331,11 @@ h6 {
   width: 270px;
   height: 270px;
 }
+.img__slide {
+  display: block;
+  width: 270px;
+  height: 270px;
+}
 
 .slide__subtitle {
   font-size: $fz-section-subtitle;
@@ -426,14 +431,16 @@ h6 {
   border: 0;
 }
 
-.double-less,
-.less {
-  color: $color-dark-s;
-  border: 2px solid $color-dark-s;
-}
+// .double-less,
+// .less {
+//   color: $color-dark-s;
+//   border: 2px solid $color-dark-s;
+// }
 
-.double-more,
-.more {
+.double-less,
+.less,
+.more,
+.double-more {
   color: $color-dark-3xl;
   border: 2px solid $color-primary;
   cursor: pointer;
@@ -441,6 +448,19 @@ h6 {
   &:hover {
     background-color: $color-primary-light;
     border: none;
+  }
+}
+.double-less.disable,
+.less.disable,
+.more.disable,
+.double-more.disable {
+  color: $color-dark-s;
+  border: 2px solid $color-dark-s;
+
+  &:hover {
+    background-color: transparent;
+    border: 2px solid $color-dark-s;
+    cursor: auto;
   }
 }
 

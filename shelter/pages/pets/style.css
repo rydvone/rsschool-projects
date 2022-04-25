@@ -309,6 +309,12 @@ h6 {
   height: 270px;
 }
 
+.img__slide {
+  display: block;
+  width: 270px;
+  height: 270px;
+}
+
 .slide__subtitle {
   font-size: 20px;
   line-height: 22.7px;
@@ -419,22 +425,37 @@ h6 {
 }
 
 .double-less,
-.less {
-  color: #cdcdcd;
-  border: 2px solid #cdcdcd;
-}
-
-.double-more,
-.more {
+.less,
+.more,
+.double-more {
   color: #292929;
   border: 2px solid #f1cdb3;
   cursor: pointer;
 }
 
-.double-more:hover,
-.more:hover {
+.double-less:hover,
+.less:hover,
+.more:hover,
+.double-more:hover {
   background-color: #fddcc4;
   border: none;
+}
+
+.double-less.disable,
+.less.disable,
+.more.disable,
+.double-more.disable {
+  color: #cdcdcd;
+  border: 2px solid #cdcdcd;
+}
+
+.double-less.disable:hover,
+.less.disable:hover,
+.more.disable:hover,
+.double-more.disable:hover {
+  background-color: transparent;
+  border: 2px solid #cdcdcd;
+  cursor: auto;
 }
 
 /* -----------------------------popup---------------------------1280---*/

@@ -1,11 +1,16 @@
 'use strict'
-import burgerSubscribe from './../../assets/src/components/burger.js';
-import dataJSONfile from "./../../assets/src/components/data.js";
+import burgerSubscribe from '../../assets/src/components/burger.js';
+import dataJSONfile from "../../assets/src/components/data.js";
+import paginationSubscribe from "./../../assets/src/components/pagination.js";
 
 // wait why all pages html + css will be load
 window.onload = () => {
-  burgerSubscribe();
   const dataJSON = dataJSONfile;
+
+
+  burgerSubscribe();
+  paginationSubscribe(dataJSON);
+
 
   console.log('Hello, friend!')
 
