@@ -66,9 +66,6 @@ function paginationSubscribe(dataJSON) {
       }
       arrRandomInner.push(arrRandomInnerTemp);
     }
-    for (let el of arrRandomInner) {
-      console.log(el);
-    }
     return arrRandomInner;
   }
 
