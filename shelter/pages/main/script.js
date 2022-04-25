@@ -38,7 +38,7 @@ window.onload = () => {
   }
   const outsidePopup = (e) => {
     if (!(popupCard.contains(e.target))) {
-      console.log('block shadow');
+      // console.log('block shadow');
       popupSwitch();
     }
   }
@@ -49,7 +49,7 @@ window.onload = () => {
   document.addEventListener('click', (e) => {
     if (e.target.closest('.slide') != null) {
       let some = e.target.closest('.slide');
-      console.log(some.innerHTML);
+      // console.log(some.innerHTML);
       let lengthNamePets = some.textContent.length;
       console.log(lengthNamePets);
       namePets = some.textContent.slice(0, (lengthNamePets - 10));
@@ -59,6 +59,10 @@ window.onload = () => {
       popupSwitch(e);
     }
     if (e.target.closest('.popup__button-close') != null) {
+      popupClose();
+    }
+    if (popupBlock.contains(e.target) && !(e.target.closest('.popup__card'))) {
+      console.log(e.target);
       popupClose();
     }
   })

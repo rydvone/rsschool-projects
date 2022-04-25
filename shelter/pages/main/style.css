@@ -913,6 +913,30 @@ button:focus {
   display: block;
 }
 
+.popup-block:hover {
+  cursor: pointer;
+}
+
+.popup-block:hover .popup__button-close {
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
+}
+
+.popup-block:hover .popup__card:hover {
+  cursor: auto;
+}
+
+.popup-block:hover .popup__card:hover .popup__button-close {
+  background-color: transparent;
+  border: 2px solid #f1cdb3;
+}
+
+.popup-block:hover .popup__card:hover .popup__button-close:hover {
+  cursor: pointer;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
+}
+
 .popup-block {
   display: none;
   position: fixed;
@@ -959,12 +983,6 @@ button:focus {
   color: #292929;
   background-color: transparent;
   border: 2px solid #f1cdb3;
-  cursor: pointer;
-}
-
-.popup__button-close:hover {
-  background-color: #fddcc4;
-  border: 2px solid #fddcc4;
 }
 
 .popup__card {

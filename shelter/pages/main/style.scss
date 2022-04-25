@@ -838,7 +838,38 @@ button:focus {
 
 .popup-block.open {
   display: block;
+  // &:hover {
+  //   .popup__button-close {
+  //     background-color: $color-primary-light;
+  //     border: 2px solid $color-primary-light;
+  //   }
+
+  // }
 }
+// >div:not(:hover)
+.popup-block:hover {
+  cursor: pointer;
+    .popup__button-close {
+      background-color: $color-primary-light;
+      border: 2px solid $color-primary-light;
+    }
+
+  .popup__card:hover {
+    cursor: auto;
+    .popup__button-close {
+      background-color: transparent;
+      border: 2px solid $color-primary;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $color-primary-light;
+        border: 2px solid $color-primary-light;
+      }
+    }
+  }
+}
+
+
 
 .popup-block {
   display: none;
@@ -849,12 +880,6 @@ button:focus {
   background-color: rgba(41, 41, 41, 0.6);
   top: 0;
   left: 0;
-  // &:hover {
-  //   .popup__button-close {
-  //     background-color: $color-primary-light;
-  //     border: 2px solid $color-primary-light;
-  //   }
-  // }
 }
 
 .popup-wrapper {
@@ -865,7 +890,6 @@ button:focus {
 }
 
 .popup__button-close {
-  // display: none;
   position: absolute;
   top: -52px;
   right: -43px;
@@ -884,12 +908,6 @@ button:focus {
   color: $color-dark-3xl;
   background-color: transparent;
   border: 2px solid $color-primary;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $color-primary-light;
-    border: 2px solid $color-primary-light;
-  }
 }
 
 .popup__card {
@@ -903,15 +921,6 @@ button:focus {
   background-color: $color-light-xl;
   border-radius: 9px;
 }
-
-// .popup__screen {
-//   width: 500px;
-//   height: 500px;
-//   border-radius: 9px;
-
-//   // background-image: url('./../../assets/images/main-1280/svg/icon-email.svg');
-
-// }
 
 .img__popup {
   display: block;
