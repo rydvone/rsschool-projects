@@ -475,15 +475,13 @@ h6 {
 
 .popup-block:hover {
   cursor: pointer;
-
-  .popup__button-close {
-    background-color: $color-primary-light;
-    border: 2px solid $color-primary-light;
-  }
+    .popup__button-close {
+      background-color: $color-primary-light;
+      border: 2px solid $color-primary-light;
+    }
 
   .popup__card:hover {
     cursor: auto;
-
     .popup__button-close {
       background-color: transparent;
       border: 2px solid $color-primary;
@@ -496,8 +494,6 @@ h6 {
     }
   }
 }
-
-
 
 .popup-block {
   display: none;
@@ -557,7 +553,9 @@ h6 {
 }
 
 .popup__content {
-  @extend %flex-col-sb;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   padding: 50px 20px 0 29px;
   overflow-y: auto;
 }
@@ -580,13 +578,14 @@ h6 {
   font-size: $fz-modal-list;
   line-height: $lh-modal-list;
   letter-spacing: $ls-modal-list;
-  padding: 0 0 40px;
+  padding: 0 0 20px;
 }
 
 .popup__list {
   font-size: $fz-modal-list;
   line-height: $lh-modal-list;
   letter-spacing: $ls-modal-list;
+  margin: 0;
   padding: 0 0 20px;
 
   .popup__item_bold {
@@ -595,14 +594,15 @@ h6 {
 }
 
 .popup__item {
-
   // list-style: disc;
   &:before {
     color: $color-primary;
     content: "●";
     padding-right: 10px;
   }
+  margin-top: 10px;
 }
+
 
 /* -----------------------------footer----------------------------1280--- */
 
@@ -735,14 +735,14 @@ h6 {
   }
 
   .popup__content {
-    padding: 10px 9px 0 11px;
+    padding: 10px 7px 0 11px;
   }
 
   .popup__name {
     font-size: $fz-section-title;
     line-height: $lh-section-title;
     letter-spacing: $ls-section-title;
-    padding: 0 0 10px;
+    padding: 0 0 9px;
     // text-align: justify;
   }
 
@@ -750,7 +750,7 @@ h6 {
     font-size: $fz-modal-type;
     line-height: $lh-modal-type;
     letter-spacing: $ls-modal-type;
-    padding: 0 0 20px;
+    padding: 0 0 18px;
     // text-align: justify;
   }
 
@@ -758,7 +758,7 @@ h6 {
     font-size: $fz-modal-text;
     line-height: $lh-modal-text;
     letter-spacing: $ls-modal-text;
-    padding: 0 0 20px;
+    padding: 0 0 10px;
     // text-align: justify;
   }
 
@@ -766,13 +766,13 @@ h6 {
     font-size: $fz-modal-list;
     line-height: $lh-modal-list;
     letter-spacing: $ls-modal-list;
-    padding: 0 0 20px;
+    margin: 0;
+    padding: 0;
 
     .popup__item_bold {
       font-weight: 700;
     }
   }
-
 }
 
 
@@ -944,17 +944,15 @@ h6 {
     top: -52px;
     right: -33px;
   }
-
   .popup__screen {
     display: none;
   }
-
   .img__popup {
     display: none;
   }
 
   .popup__content {
-    padding: 10px;
+    padding: 10px 10px 0;
   }
 
   .popup__name {
@@ -966,7 +964,7 @@ h6 {
   }
 
   .popup__description {
-    padding: 0 0 24px;
+    padding: 0 0 9px;
     text-align: justify;
   }
 

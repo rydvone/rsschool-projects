@@ -25,16 +25,16 @@ function paginationSubscribe(dataJSON) {
   let arrPetsPage = [];
 
   function loadPage() {
-    
+
     page.textContent = numCurrentPage;
     numCurrentPageIsStart();
-    if (numSlide == 8) {
+    if (numSlide === 8) {
       for (let el of arrPetsSlideAll) {
         arrPetsPage.push(el);
       }
     }
-    if (numSlide != 8) {
-      let arrTemp = createArrayPetsForAllPage(numSlide);
+    if (numSlide !== 8) {
+      let arrTemp = createArrayPets6(numSlide, numMaxPage);
       for (let el of arrTemp) {
         arrPetsPage.push(el);
       }
@@ -48,15 +48,23 @@ function paginationSubscribe(dataJSON) {
     }
   }
 
-  function createArrayPetsForAllPage(countSlide) {
+  function createArrayPets6(countSlide, countPage) {
     let arrRandomInner = [];
-    let arrPetsPageTemp = arrPetsSlideAll.flat();
+    let rndNum;
 
-    for (let i = 0; i <arrPetsPageTemp.length; i += countSlide) {
-      arrRandomInner.push(arrPetsPageTemp.slice(i, i + countSlide));
-    }
-    for (let el of arrRandomInner) {
-      // console.log(el);
+    for (let j = 0; j < countPage; j++) {
+      let arrRandomInnerTemp = [];
+      rndNum = Math.floor(Math.random() * 8);
+      arrRandomInnerTemp.push(rndNum);
+      for (let i = 0; i < (countSlide - 1); i++) {
+        rndNum = Math.floor(Math.random() * 8);
+        while (
+          arrRandomInnerTemp.indexOf(rndNum) !== -1) {
+          rndNum = Math.floor(Math.random() * 8);
+        }
+        arrRandomInnerTemp.push(rndNum);
+      }
+      arrRandomInner.push(arrRandomInnerTemp);
     }
     return arrRandomInner;
   }
@@ -83,7 +91,7 @@ function paginationSubscribe(dataJSON) {
   console.log('initial array:');
   console.log(arrPetsSlideAll);
   loadPage();
-  
+
   createSlide(slider, numCurrentPage);
 
   function numCurrentPageIsStart() {
