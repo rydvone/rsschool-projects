@@ -26,7 +26,7 @@
           justify-content: space-between;
 }
 
-.body-block, .main-block, .header__logo, .pets-wrapper, .slide, .popup__content, .footer__contacts, .footer__location {
+.body-block, .main-block, .header__logo, .pets-wrapper, .slide, .footer__contacts, .footer__location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -552,6 +552,16 @@ h6 {
 }
 
 .popup__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding: 50px 20px 0 29px;
   overflow-y: auto;
 }
@@ -574,18 +584,23 @@ h6 {
   font-size: 15px;
   line-height: 1.1em;
   letter-spacing: 0.06em;
-  padding: 0 0 40px;
+  padding: 0 0 20px;
 }
 
 .popup__list {
   font-size: 15px;
   line-height: 1.1em;
   letter-spacing: 0.06em;
+  margin: 0;
   padding: 0 0 20px;
 }
 
 .popup__list .popup__item_bold {
   font-weight: 700;
+}
+
+.popup__item {
+  margin-top: 10px;
 }
 
 .popup__item:before {
@@ -719,31 +734,32 @@ h6 {
     height: 350px;
   }
   .popup__content {
-    padding: 10px 9px 0 11px;
+    padding: 10px 7px 0 11px;
   }
   .popup__name {
     font-size: 35px;
     line-height: 1.3em;
     letter-spacing: 0.06em;
-    padding: 0 0 10px;
+    padding: 0 0 9px;
   }
   .popup__type {
     font-size: 20px;
     line-height: 1.15em;
     letter-spacing: 0.06em;
-    padding: 0 0 20px;
+    padding: 0 0 18px;
   }
   .popup__description {
     font-size: 13px;
     line-height: 1.1em;
     letter-spacing: 0.06em;
-    padding: 0 0 20px;
+    padding: 0 0 10px;
   }
   .popup__list {
     font-size: 15px;
     line-height: 1.1em;
     letter-spacing: 0.06em;
-    padding: 0 0 20px;
+    margin: 0;
+    padding: 0;
   }
   .popup__list .popup__item_bold {
     font-weight: 700;
@@ -937,7 +953,7 @@ h6 {
     display: none;
   }
   .popup__content {
-    padding: 10px;
+    padding: 10px 10px 0;
   }
   .popup__name {
     text-align: center;
@@ -946,7 +962,7 @@ h6 {
     text-align: center;
   }
   .popup__description {
-    padding: 0 0 24px;
+    padding: 0 0 9px;
     text-align: justify;
   }
 }
