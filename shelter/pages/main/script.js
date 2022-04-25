@@ -1,24 +1,22 @@
-import burgerSubscribe from "./../../assets/src/components/burger.js";
-// import popupSubscribe from "./../../assets/src/components/popup.js";
+'use strict'
 import dataJSONfile from "./../../assets/src/components/data.js";
+import burgerSubscribe from "./../../assets/src/components/burger.js";
 import sliderSubscribe from "./../../assets/src/components/slider.js";
-
+// import popupSubscribe from "./../../assets/src/components/popup.js";
 
 
 // wait why all pages html + css will be load
 window.onload = () => {
+  console.log("");
+  console.log("Hello, friend!");
+  console.log("");
+
+
   const dataJSON = dataJSONfile;
   // components
   burgerSubscribe();
-  // popupSubscribe();
   sliderSubscribe(dataJSON);
-
-
-  console.log("Hello, friend!");
-
-
-
-
+  // popupSubscribe();
 
 
   // popup
@@ -37,12 +35,7 @@ window.onload = () => {
     popupBlock.classList.remove('open');
     body.classList.remove('active');
   }
-  const outsidePopup = (e) => {
-    if (!(popupCard.contains(e.target))) {
-      // console.log('block shadow');
-      popupSwitch();
-    }
-  }
+
 
   buttonClose.addEventListener('click', popupClose);
   // slide.forEach((el) => el.addEventListener('click', popupSwitch));
@@ -50,7 +43,6 @@ window.onload = () => {
   document.addEventListener('click', (e) => {
     if (e.target.closest('.slide') != null) {
       let some = e.target.closest('.slide');
-      // console.log(some.innerHTML);
       let lengthNamePets = some.textContent.length;
       namePets = some.textContent.slice(0, (lengthNamePets - 10));
       console.log(namePets);
@@ -62,8 +54,7 @@ window.onload = () => {
       popupClose();
     }
     if (popupBlock.contains(e.target) && !(e.target.closest('.popup__card'))) {
-      console.log(e.target);
-      popupClose();
+       popupClose();
     }
   })
 
