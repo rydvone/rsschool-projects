@@ -8,19 +8,10 @@ function paginationSubscribe(dataJSON) {
   const buttonMore = document.querySelector(".more");
   const page = document.querySelector(".page");
 
-
-
-  // const sliderBtnLeft = document.querySelector(".slide__button_prev");
-  // const sliderBtnRight = document.querySelector(".slide__button_next");
-  // const slides = document.querySelector(".slides");
-  // const wrapperSlideLeft = document.querySelector("#slide-left");
-  // const wrapperSlideRight = document.querySelector("#slide-right");
-  // const wrapperSlideActive = document.querySelector("#slide-active");
   const windowInnerWidth = window.innerWidth;
   let numCurrentPage = 1;
   let numMaxPage = 6;
   let numSlide = 8;
-
 
   if (windowInnerWidth < 1280 && windowInnerWidth >= 768) {
     numSlide = 6;
@@ -31,20 +22,24 @@ function paginationSubscribe(dataJSON) {
     numMaxPage = 16;
   }
   let arrPetsSlideAll = [];
-  let arrPetsPage8 = [];
-  let arrPetsPage6 ;
-  let arrPetsPage3 = [];
-
-
+  let arrPetsPage = [];
 
   function loadPage() {
+    
     page.textContent = numCurrentPage;
     numCurrentPageIsStart();
     if (numSlide == 8) {
-      arrPetsPage8 = [...arrPetsSlideAll];
+      for (let el of arrPetsSlideAll) {
+        arrPetsPage.push(el);
+      }
+    }
+    if (numSlide != 8) {
+      let arrTemp = createArrayPetsForAllPage(numSlide);
+      for (let el of arrTemp) {
+        arrPetsPage.push(el);
+      }
     }
   }
-
 
   // create common array for all pages
   function createArrayPetsCommon() {
@@ -53,38 +48,18 @@ function paginationSubscribe(dataJSON) {
     }
   }
 
-  function createArrayPetsForAllPage() {
-    let countSlide = 6;
-    let countMaxPage = 8;
+  function createArrayPetsForAllPage(countSlide) {
     let arrRandomInner = [];
-    // let arrPetsPageTemp = arrPetsSlideAll.join().split();
-    // let min = 0;
-    // let max = arrPetsPageTemp.length;
-    // let rndNum = 0;
+    let arrPetsPageTemp = arrPetsSlideAll.flat();
 
-    // const random = (min, max) => {
-    //   return Math.floor(Math.random() * (max - min + 1)) + min;
-    // };
-
-    // for (let i = 0; i < countMaxPage; i++) {      
-    //   let arrRandomInnerTemp = [];
-    //   rndNum = random(min, max);
-    //   arrRandomInnerTemp.push(arrPetsPageTemp[rndNum]);
-    //   arrPetsPageTemp.splice(rndNum, 1);
-    //   max--;
-    //   for (let j = 0; j < countSlide - 1; j++) {
-    //     rndNum = random(min, max);
-    //     while (arrRandomInnerTemp.indexOf(arrPetsPageTemp[rndNum]) !== -1) {
-    //       rndNum = random(min, max);
-    //     }
-    //     arrRandomInnerTemp.push(arrPetsPageTemp[rndNum]);
-    //     arrPetsPageTemp.splice(rndNum, 1);
-    //     max--;
-    //   }
-    //   arrRandomInner.push(arrRandomInnerTemp);
-    // }
+    for (let i = 0; i <arrPetsPageTemp.length; i += countSlide) {
+      arrRandomInner.push(arrPetsPageTemp.slice(i, i + countSlide));
+    }
+    for (let el of arrRandomInner) {
+      console.log(el);
+    }
+    return arrRandomInner;
   }
-  
 
   // random
   function createRandomPage(numPetsCard) {
@@ -99,22 +74,17 @@ function paginationSubscribe(dataJSON) {
       }
       arrRandomInner.push(rndNum);
     }
-    // console.log("arrRandomInner = " + arrRandomInner);
+
     return arrRandomInner;
   }
-  //   arrNumPetsActive = [...arrRandomInner];
-
 
   // createRandomPage(numSlide);
   createArrayPetsCommon();
+  console.log('initial array:');
   console.log(arrPetsSlideAll);
   loadPage();
-  createArrayPetsForAllPage();
-  createSlide(slider, numCurrentPage);
-
   
-
-
+  createSlide(slider, numCurrentPage);
 
   function numCurrentPageIsStart() {
     buttonDoubleLess.disabled = true;
@@ -170,7 +140,6 @@ function paginationSubscribe(dataJSON) {
     buttonDoubleMore.addEventListener("click", moveDoubleMore);
   }
 
-
   function moveDoubleLess() {
     numCurrentPage = 1;
     createSlide(slider, numCurrentPage);
@@ -215,76 +184,19 @@ function paginationSubscribe(dataJSON) {
   buttonDoubleMore.addEventListener("click", moveDoubleMore);
 
 
-
-
-
-
-  //   let arrPetsPage6Temp = arrPetsSlideAll.join().split();
-
-
-
-  // createSlide(wrapperSlideActive, true);
-  // createSlide(wrapperSlideLeft, false);
-  // document.querySelector("#slide-right").innerHTML =
-  //   document.querySelector("#slide-left").innerHTML;
-
-  // function moveLeft() {
-  //   slides.classList.add("move-to-left");
-  //   // disable for the duration of the animation
-  //   sliderBtnLeft.removeEventListener("click", moveLeft);
-  //   sliderBtnRight.removeEventListener("click", moveRight);
-  // }
-  // function moveRight() {
-  //   slides.classList.add("move-to-right");
-  //   // disable btn for the duration of the animation
-  //   sliderBtnLeft.removeEventListener("click", moveLeft);
-  //   sliderBtnRight.removeEventListener("click", moveRight);
-  // }
-
-  // sliderBtnLeft.addEventListener("click", moveLeft);
-  // sliderBtnRight.addEventListener("click", moveRight);
-
-  // slides.addEventListener("animationend", (ev) => {
-  //   // enable listener after end animation
-  //   sliderBtnLeft.addEventListener("click", moveLeft);
-  //   sliderBtnRight.addEventListener("click", moveRight);
-
-  //   if (ev.animationName === "move-left") {
-  //     slides.classList.remove("move-to-left");
-  //     const wrapperSlideLeftHTML = wrapperSlideLeft.innerHTML;
-  //     wrapperSlideActive.innerHTML = wrapperSlideLeftHTML;
-
-  //     createSlide(wrapperSlideLeft, false);
-  //     document.querySelector("#slide-right").innerHTML =
-  //       document.querySelector("#slide-left").innerHTML;
-  //   }
-
-  //   if (ev.animationName === "move-right") {
-  //     slides.classList.remove("move-to-right");
-  //     const wrapperSlideRightHTML = wrapperSlideRight.innerHTML;
-  //     wrapperSlideActive.innerHTML = wrapperSlideRightHTML;
-
-  //     createSlide(wrapperSlideRight, false);
-  //     document.querySelector("#slide-left").innerHTML =
-  //       document.querySelector("#slide-right").innerHTML;
-  //   }
-  // });
-
-
   function createSlide(nameSlide, numPageArg) {
     nameSlide.innerHTML = "";
-    // let arrRandom = findRandom(ckeckEmptyArr);
+    console.log('numSlide = ' + numSlide + '   numMaxPage = ' + numMaxPage);
     for (let i = 0; i < numSlide; i++) {
-      // console.log(arrPetsSlideAll[3]);
-      console.log(numPageArg);
-      let namePets = dataJSON[arrPetsSlideAll[numPageArg - 1][i]].name;
+      let namePets = dataJSON[arrPetsPage[numPageArg - 1][i]].name;
 
       const tagDivSlide1 = document.createElement("div");
       tagDivSlide1.classList.add("slide");
 
       const tagImgSlide1 = document.createElement("img");
       tagImgSlide1.classList.add("img__slide");
-      tagImgSlide1.src = "./../../assets/images/pets/" + namePets.toLowerCase() + ".png";
+      tagImgSlide1.src =
+        "./../../assets/images/pets/" + namePets.toLowerCase() + ".png";
       tagImgSlide1.alt = "your best friends";
 
       const tagDivSubtitleSlide1 = document.createElement("div");

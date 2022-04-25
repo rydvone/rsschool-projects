@@ -6,14 +6,11 @@ import paginationSubscribe from "./../../assets/src/components/pagination.js";
 
 // wait why all pages html + css will be load
 window.onload = () => {
+  console.log('Hello, friend!')
+
   const dataJSON = dataJSONfile;
-
-
   burgerSubscribe();
   paginationSubscribe(dataJSON);
-
-
-  console.log('Hello, friend!')
 
 
 
@@ -34,13 +31,13 @@ window.onload = () => {
     body.classList.remove('active');
   }
 
+
   buttonClose.addEventListener('click', popupClose);
   // slide.forEach((el) => el.addEventListener('click', popupSwitch));
 
   document.addEventListener('click', (e) => {
     if (e.target.closest('.slide') != null) {
       let some = e.target.closest('.slide');
-
       let lengthNamePets = some.textContent.length;
       namePets = some.textContent.slice(0, (lengthNamePets - 10));
       console.log(namePets);
@@ -49,6 +46,9 @@ window.onload = () => {
       popupSwitch(e);
     }
     if (e.target.closest('.popup__button-close') != null) {
+      popupClose();
+    }
+    if (popupBlock.contains(e.target) && !(e.target.closest('.popup__card'))) {
       popupClose();
     }
   })
@@ -166,5 +166,6 @@ window.onload = () => {
     tagDivPopupItem4.append(tagDivPopupItem4Span1);
     tagDivPopupItem4.append(tagDivPopupItem4Span2);
   }
+
 
 }
