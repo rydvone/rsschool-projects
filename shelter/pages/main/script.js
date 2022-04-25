@@ -4,6 +4,7 @@ import dataJSONfile from "./../../assets/src/components/data.js";
 import sliderSubscribe from "./../../assets/src/components/slider.js";
 
 
+
 // wait why all pages html + css will be load
 window.onload = () => {
   const dataJSON = dataJSONfile;
