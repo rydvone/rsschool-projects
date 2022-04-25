@@ -56,7 +56,7 @@ function paginationSubscribe(dataJSON) {
       arrRandomInner.push(arrPetsPageTemp.slice(i, i + countSlide));
     }
     for (let el of arrRandomInner) {
-      console.log(el);
+      // console.log(el);
     }
     return arrRandomInner;
   }
@@ -186,7 +186,7 @@ function paginationSubscribe(dataJSON) {
 
   function createSlide(nameSlide, numPageArg) {
     nameSlide.innerHTML = "";
-    console.log('numSlide = ' + numSlide + '   numMaxPage = ' + numMaxPage);
+    // console.log('numSlide = ' + numSlide + '   numMaxPage = ' + numMaxPage);
     for (let i = 0; i < numSlide; i++) {
       let namePets = dataJSON[arrPetsPage[numPageArg - 1][i]].name;
 

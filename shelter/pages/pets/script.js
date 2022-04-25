@@ -6,7 +6,9 @@ import paginationSubscribe from "./../../assets/src/components/pagination.js";
 
 // wait why all pages html + css will be load
 window.onload = () => {
-  console.log('Hello, friend!')
+  console.log("");
+  console.log("Hello, friend!");
+  console.log("");
 
   const dataJSON = dataJSONfile;
   burgerSubscribe();
