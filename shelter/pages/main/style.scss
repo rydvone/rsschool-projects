@@ -838,15 +838,8 @@ button:focus {
 
 .popup-block.open {
   display: block;
-  // &:hover {
-  //   .popup__button-close {
-  //     background-color: $color-primary-light;
-  //     border: 2px solid $color-primary-light;
-  //   }
-
-  // }
 }
-// >div:not(:hover)
+
 .popup-block:hover {
   cursor: pointer;
     .popup__button-close {
@@ -873,7 +866,6 @@ button:focus {
 
 .popup-block {
   display: none;
-  // display: block;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -968,15 +960,12 @@ button:focus {
 }
 
 .popup__item {
-
   // list-style: disc;
   &:before {
     color: $color-primary;
     content: "●";
     padding-right: 10px;
-
   }
-
 }
 
 /* ----------------------------------------------------------------768--- */
@@ -1236,41 +1225,6 @@ button:focus {
   .menu__nav {
     display: none;
   }
-
-  // .wrapper-header__logo.open {
-  //   z-index: 11;
-  // }
-
-
-  // .menu__nav.open {
-  //   order: 3;
-  //   display: block;
-  //   transform: translateX(0);
-  //   // box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7);  
-  //   // background: rgba(41, 41, 41, 0.6);
-  //   box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.25);
-  // }
-
-  // .menu__nav {
-  //   background-color: $color-dark-3xl;
-  //   // width: 243px;
-  //   // height: 327px;
-
-  //   width: 320px;
-  //   height: 100vh;
-  //   position: fixed;
-  //   top: 0;
-  //   right: 0;
-  //   z-index: 10;
-  //   transform: translateX(110%);
-  //   overflow-x: auto;
-  //   transition: transform $time-fast ease-in-out;
-
-
-  //   padding: 30px 10px;
-  // }
-
-
 
   .menu__nav {
     display: block;

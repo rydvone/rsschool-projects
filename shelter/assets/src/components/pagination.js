@@ -274,9 +274,10 @@ function paginationSubscribe(dataJSON) {
   function createSlide(nameSlide, numPageArg) {
     nameSlide.innerHTML = "";
     // let arrRandom = findRandom(ckeckEmptyArr);
-
     for (let i = 0; i < numSlide; i++) {
-      let namePets = dataJSON[arrPetsPage8[numPageArg - 1][i]].name;
+      // console.log(arrPetsSlideAll[3]);
+      console.log(numPageArg);
+      let namePets = dataJSON[arrPetsSlideAll[numPageArg - 1][i]].name;
 
       const tagDivSlide1 = document.createElement("div");
       tagDivSlide1.classList.add("slide");
