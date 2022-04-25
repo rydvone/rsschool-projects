@@ -904,17 +904,20 @@ button:focus {
   border-radius: 9px;
 }
 
-.popup__screen {
+// .popup__screen {
+//   width: 500px;
+//   height: 500px;
+//   border-radius: 9px;
+
+//   // background-image: url('./../../assets/images/main-1280/svg/icon-email.svg');
+
+// }
+
+.img__popup {
+  display: block;
   width: 500px;
   height: 500px;
-  border-radius: 9px;
-
-  // background-image: url('./../../assets/images/main-1280/svg/icon-email.svg');
-  .img__popup {
-    display: block;
-    width: 500px;
-    height: 500px;
-  }
+  border-radius: 9px 9px;
 }
 
 .popup__content {
@@ -1145,15 +1148,10 @@ button:focus {
     height: 350px;
   }
 
-  .popup__screen {
+  .img__popup {
+    display: block;
     width: 350px;
     height: 350px;
-
-    .img__popup {
-      display: block;
-      width: 350px;
-      height: 350px;
-    }
   }
 
   .popup__content {

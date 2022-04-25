@@ -976,16 +976,11 @@ button:focus {
   border-radius: 9px;
 }
 
-.popup__screen {
-  width: 500px;
-  height: 500px;
-  border-radius: 9px;
-}
-
-.popup__screen .img__popup {
+.img__popup {
   display: block;
   width: 500px;
   height: 500px;
+  border-radius: 9px 9px;
 }
 
 .popup__content {
@@ -1212,11 +1207,7 @@ button:focus {
     width: 630px;
     height: 350px;
   }
-  .popup__screen {
-    width: 350px;
-    height: 350px;
-  }
-  .popup__screen .img__popup {
+  .img__popup {
     display: block;
     width: 350px;
     height: 350px;
