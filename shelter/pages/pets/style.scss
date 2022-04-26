@@ -819,12 +819,12 @@ h6 {
     transform: translateX(110%);
     overflow-x: auto;
     transition: transform $time-fast ease-in-out;
-
-    padding: 248px 0 0;
   }
 
   .menu__nav.open {
-    display: block;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
     transform: translateX(0);
     box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7);
   }
