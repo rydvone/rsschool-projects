@@ -12,6 +12,12 @@ function paginationSubscribe(dataJSON) {
   let numCurrentPage = 1;
   let numMaxPage = 6;
   let numSlide = 8;
+  let arrData = [
+    [0, 1, 2, 3, 4, 5],
+    [6, 7, 0, 1, 2, 3],
+    [4, 5, 6, 7, 0, 1],
+    [2, 3, 4, 5, 6, 7],
+  ];
 
   if (windowInnerWidth < 1280 && windowInnerWidth >= 768) {
     numSlide = 6;
@@ -33,13 +39,78 @@ function paginationSubscribe(dataJSON) {
         arrPetsPage.push(el);
       }
     }
-    if (numSlide !== 8) {
-      let arrTemp = createArrayPets6(numSlide, numMaxPage);
+    // if (numSlide !== 8) {
+    //   let arrTemp = createArrayPets6(numSlide, numMaxPage);
+    //   for (let el of arrTemp) {
+    //     arrPetsPage.push(el);
+    //   }
+    // }
+    if (numSlide === 6) {
+      let arrTemp = getShuffle(arrData);
+      for (let el of arrTemp) {
+        arrPetsPage.push(el);
+      }
+    }
+    if (numSlide === 3) {
+      const arr6 = getShuffle(arrData);
+      let arrTemp = sliceFrom6To3(arr6);
       for (let el of arrTemp) {
         arrPetsPage.push(el);
       }
     }
   }
+
+
+  // after deadline
+  function getRandomStart(num) {
+    let arrInner = [];
+    let randomNum;  
+    randomNum = Math.floor(Math.random() * num);
+    arrInner.push(randomNum);  
+    for (let i = 0; i < num - 1; i++) {
+      randomNum = Math.floor(Math.random() * num);
+      while (arrInner.indexOf(randomNum) !== -1) {
+        randomNum = Math.floor(Math.random() * num);
+      }
+      arrInner.push(randomNum);
+    }
+    return arrInner;
+  }
+
+  function getShuffle(arr) {
+    let arrInner = [];
+
+    for(let j = 0; j < 2; j++) {
+      let arrForArr = getRandomStart(4);
+      for (let i = 0; i < arrForArr.length; i++) {
+        let arrTemp = [...arr[arrForArr[i]]];
+        let arrTempShuffle = arrTemp.sort(function () {
+          return Math.random() - 0.5;
+        });
+        arrInner.push(arrTempShuffle);
+      }
+    } 
+    console.log('random 6:');
+    console.log(arrInner);
+    return arrInner;
+  }
+  
+  function sliceFrom6To3(arr) {
+    let arrInner = [];
+    for (const el of arr) {
+      let arrTemp = [];
+      const size = 3;
+      for (let i = 0; i <el.length; i += size) {
+        arrInner.push(el.slice(i, i + size));
+      }    
+    }
+    console.log('random 3:');
+    console.log(arrInner);
+    return arrInner;
+  }
+
+
+
 
   // create common array for all pages
   function createArrayPetsCommon() {
@@ -82,7 +153,6 @@ function paginationSubscribe(dataJSON) {
       }
       arrRandomInner.push(rndNum);
     }
-
     return arrRandomInner;
   }
 
