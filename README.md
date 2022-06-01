@@ -2,7 +2,8 @@
 Private repository for @rydvone
 
 ### projects
-[shelter ](https://rolling-scopes-school.github.io/rydvone-JSFE2022Q1/shelter/pages/main/)
+[shelter ](https://rolling-scopes-school.github.io/rydvone-JSFE2022Q1/shelter/pages/main/)  
+  
 [self-intro](https://github.com/rolling-scopes-school/rydvone-JSFE2022Q1/blob/self-introduction/self-introduction/index.md)
 
 ****
