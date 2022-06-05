@@ -2,5 +2,5 @@
 
 [video](http://youtube.com)
 ------
-[en version]()  
-[ru version]()  
+[en version](./en-self-introdaction.md)  
+[ru version](./ru-self-introdaction.md)  
