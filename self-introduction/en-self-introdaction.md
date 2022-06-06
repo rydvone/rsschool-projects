@@ -2,7 +2,7 @@
 
 ### Hello, friend. 
 Hello there. My name is Alexander and now I'll tell you about myself.
-I graduated from the Sukhoi State Technical University of Gomel, Engineer by radioelectronics, and after that I continued to study and received Master's degree in technical sciences. And now I am currently attending the RSSchool frontend course.
+I graduated from the Sukhoi State Technical University of Gomel, Engineer by radioelectronics, and after that I continued to study and received Master's degree in technical sciences. And now I am attending the RSSchool Frontend course.
 
 ### About my work experience  
 I worked as software engineer for the automated control system at the factory, but that's not at all the kind of programming that we learn in this course.
@@ -16,14 +16,12 @@ My english level is A2. This is Epam english test result in June 2022.
 
 ### Pet project
 The last few months, my main pet project has been studying at RS School. I started my way in frontend from stage 0 in December 2021. 
-
-The most technically challenging for me in RS School was the Virtual Keyboard project. The most technically challenging  project for me in RS School was the Virtual Keyboard. Also it was one of the most interesting project.  
+The most technically challenging  project for me in RS School was the Virtual Keyboard. Also it was one of the most interesting project.  
 I was so great interested in this task that I didn't want to sleep for several days.
-It was in this task that I face challenges that the  code turned out to be very voluminous and hard to read. Step by step, I refactored code more or less normal view. But, Unfortunately, I still do not always have enough knowledge to make the code short and easy to read, even for such small projects.  
+It was in this task that I face challenges that the code was very voluminous and hard to read. Step by step, I refactored code more or less normal view.  But, Unfortunately, I still do not always have enough knowledge to make the code short and easy to read.  
 Other interesting tasks were the HTML Builder and implementing JS code to the Shelter project (like as slider, random picture). 
 It was interesting because I was able to apply knowledge in programming in a real project.
-Not all tasks I did the first time, but if I knew there was something that was wrong I tried fix it.  
-There is task where I have difficulties - that is create a good design myself. I hope that I know the difference between good and bad design or usability, but right now it's hard for me to do well myself.
+I hope that I know the difference between good and bad design or usability, but right now it's hard for me to create a good design myself.
 
 ### About my strengths.
 Whats about my strengths?
@@ -40,5 +38,3 @@ I really enjoy with programming: creating new programs, troubleshooting, solving
 
 ### In the end
 I know exactly that I will become a software engineer, and I will do my best to reach my goal.
-
-
