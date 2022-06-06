@@ -42,20 +42,3 @@ I really enjoy with programming: creating new programs, troubleshooting, solving
 I know exactly that I will become a software engineer, and I will do my best to reach my goal.
 
 
-
----------------------------------------------------------------------------------------  
-### Pet project
-В последнее время главным моим проектом была учеба в RS School.  Я начал свой путь с этапа 0. 
-Самым сложным в техническом плане, для меня, был проект Виртуальной клавиатуры. 
-В начале программный код получился очень объемным и не очень стабильным. 
-У меня не сразу получилось понять, как лучше всего сделать это задание. Некоторые нюансы работы у меня вызывают вопрос до сих пор. Т.к. задания идут один за одним, у меня не было времени и сил решить этот вопрос до сих пор. При этом Виртуальная клавиатура была и одним из самых интересных заданий. Я мало спал, потому что не мог остановиться решать task. Вопрос который у меня возник, помимо прочего, это проблема при переключении языка.
-Очень интересными заданиями были  HTML Builder, и JS в Shelter project (slider? random picture). 
-Не все задания я делал с первого раза, но если я знал, что где-то есть нерабочие элементы (сам или когда мне об том указывали на кросс-чеке), то я переделывал их.
-Во frontend мне тяжело - это  придумать самому хороший дизайн. Я могу оценить удобство и дизайн уже готового решения и отличить (я надеюсь) хороший от плохого. Но придумать что-то красивое самому  - сейчас это сложно и долго для меня. 
-
-My main project lately has been studying at RS School.  I started my way from stage 0. 
-The most technically challenging for me was the Virtual Keyboard project. It took me a while to figure out how best to do this task. Some of the nuances of the work I still have a question. Since the assignments go one by one, I did not have the time and energy to solve this issue until now. That said, the Virtual Keyboard was also one of the most interesting assignments. I did not sleep much, because I could not stop to solve the problem. The issue I had, among other things, was the problem of switching the language.
-Another interesting assignments were the HTML Builder, and JS in the Shelter project (slider? random picture). 
-Not all tasks I did the first time, but if I knew there was something that didn't work (by myself or when someone pointed it out to me on the cross check), I redid it.
-The hard part for me on the frontend is coming up with a good design myself. I can assess the usability and design of an existing solution and distinguish (I hope) good from bad. But to come up with something nice by myself - now it's hard and long for me. 
-
