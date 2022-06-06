@@ -16,11 +16,14 @@ My english level is A2. This is Epam english test result in June 2022.
 
 ### Pet project
 The last few months, my main pet project has been studying at RS School. I started my way in frontend from stage 0 in December 2021. 
-The most technically challenging for me in RS School was the Virtual Keyboard project. It took me a while to figure out how best to do this task. Some of the nuances of the work I still have a question. Since the assignments go one by one, I did not have the time and energy to solve this issue until now. That said, the Virtual Keyboard was also one of the most interesting assignments. I did not sleep much, because I could not stop to solve the problem. The issue I had, among other things, was the problem of switching the language.  
-Other interesting tasks were the HTML Builder, and implementing JS in the Shelter project (like as slider, random picture). 
+
+The most technically challenging for me in RS School was the Virtual Keyboard project. The most technically challenging  project for me in RS School was the Virtual Keyboard. Also it was one of the most interesting project.  
+I was so great interested in this task that I didn't want to sleep for several days.
+It was in this task that I face challenges that the  code turned out to be very voluminous and hard to read. Step by step, I refactored code more or less normal view. But, Unfortunately, I still do not always have enough knowledge to make the code short and easy to read, even for such small projects.  
+Other interesting tasks were the HTML Builder and implementing JS code to the Shelter project (like as slider, random picture). 
 It was interesting because I was able to apply knowledge in programming in a real project.
-Not all tasks I did the first time, but if I knew there was something that didn't work (by myself or when someone pointed it out to me on the cross check), I fixed it.  
-There is task where I have difficulties - that is create a good design myself. I hope that I know the difference between good and bad design or usability,  but right now it's hard for me to do well myself.
+Not all tasks I did the first time, but if I knew there was something that was wrong I tried fix it.  
+There is task where I have difficulties - that is create a good design myself. I hope that I know the difference between good and bad design or usability, but right now it's hard for me to do well myself.
 
 ### About my strengths.
 Whats about my strengths?
