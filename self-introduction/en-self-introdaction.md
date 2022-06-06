@@ -20,7 +20,7 @@ The most technically challenging for me in RS School was the Virtual Keyboard pr
 Other interesting tasks were the HTML Builder, and implementing JS in the Shelter project (like as slider, random picture). 
 It was interesting because I was able to apply knowledge in programming in a real project.
 Not all tasks I did the first time, but if I knew there was something that didn't work (by myself or when someone pointed it out to me on the cross check), I fixed it.  
-There is task where I have difficulties - is create a good design myself. I hope that I know the difference between good and bad design and usability,  but right now it's hard for me to do well myself.
+There is task where I have difficulties - that is create a good design myself. I hope that I know the difference between good and bad design or usability,  but right now it's hard for me to do well myself.
 
 ### About my strengths.
 Whats about my strengths?
