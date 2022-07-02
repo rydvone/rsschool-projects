@@ -1,35 +1,105 @@
+.link {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.link:link {
+  color: inherit;
+}
+
+.link:visited {
+  color: inherit;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: #cdedff;
+}
+
+.icons {
+  filter: brightness(0) saturate(100%) invert(91%) sepia(44%) saturate(6512%) hue-rotate(173deg) brightness(107%) contrast(101%);
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+.icons:hover {
+  filter: invert(81%) sepia(13%) saturate(742%) hue-rotate(4deg) brightness(17%) contrast(17%);
+  cursor: pointer;
+}
+
 body {
-    color: #fff;
-    background: #17181c;
-    font-family: sans-serif;
+  color: #fff;
+  background: #17181c;
+  font-family: sans-serif;
 }
 
 header {
-    padding: 10px 30px;
+  padding: 10px 30px;
 }
 
 header h1 {
-    font-size: 40px;
-    font-weight: 800;
+  font-size: 40px;
+  font-weight: 800;
 }
 
 footer {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 footer .copyright {
-    font-size: 14px;
-    color: #333;
-    text-align: center;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
 }
+
 footer .copyright a {
-    color: #444;
+  color: #444;
 }
+
 footer .copyright a:hover {
-    color: #555;
+  color: #555;
 }
+
 footer .copyright:before {
-    content: '©';
+  content: '©';
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.footer__data {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__item {
+  display: inline;
+  margin-right: 10px;
+}
+
+.footer__rs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+}
+
+.icons_footer {
+  background-color: var(--color-yellow-light);
+  width: auto;
+  height: 22px;
+  display: block;
+  border-radius: 2px;
+}
+
+.icons_footer:hover {
+  filter: invert(86%) sepia(5%) saturate(742%) hue-rotate(78deg) brightness(101%) contrast(112%);
+  cursor: pointer;
 }
