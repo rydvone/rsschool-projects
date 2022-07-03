@@ -1,12 +1,17 @@
+import { ResponseArticle } from '../../types/articles';
+import { ResponseSource } from '../../types/source';
+
 class Loader {
-    constructor(baseLink, options) {
-        this.baseLink = baseLink;
-        this.options = options;
+    private _baseLink: string;
+    private _options: string[];
+    constructor(baseLink: string, options: string[]) {
+        this._baseLink = baseLink;
+        this._options = options;
     }
 
     getResp(
         { endpoint, options = {} },
-        callback = () => {
+        callback = (): void => {
             console.error('No callback for GET response');
         }
     ) {
@@ -34,12 +39,12 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load(method, endpoint, callback, options = {}) {
+    load<K>(method: string, endpoint: string, callback: (data: K) => void, options = {}) {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => res.json())
             .then((data) => callback(data))
-            .catch((err) => console.error(err));
+            .catch((err: Error) => console.error(err));
     }
 }
 
