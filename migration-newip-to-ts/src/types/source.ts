@@ -1,19 +1,19 @@
 export interface NewsAPIMain {
     status: 'ok' | 'error';
-    sources: NewsAPISourse[];
+    sources: ISourse[];
 }
 
-export interface NewsAPISourse {
+export interface ISourse {
     id: string;
     name: string;
     description: string;
     url: string;
-    category: Category;
-    language: Language;
-    country: Country;
+    category: ICategory;
+    language: ILanguage;
+    country: ICountry;
 }
 
-export enum Category {
+export enum ICategory {
     BUSINESS = 'business',
     ENTERTAINMENT = 'entertainment',
     GENERAL = 'general',
@@ -23,7 +23,7 @@ export enum Category {
     TECHNOLOGY = 'technology',
 }
 
-export enum Language {
+export enum ILanguage {
     AR = 'ar',
     DE = 'de',
     EN = 'en',
@@ -40,7 +40,7 @@ export enum Language {
     ZH = 'zh',
 }
 
-export enum Country {
+export enum ICountry {
     AE = 'ae',
     AR = 'ar',
     AT = 'at',
