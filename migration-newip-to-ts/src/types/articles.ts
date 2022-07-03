@@ -1,5 +1,11 @@
+export interface ResponseArticle {
+    status: 'ok' | 'error';
+    totalResults: number;
+    articles: IArticle[];
+}
+
 export interface IArticle {
-    source: ISource;
+    source: ISourcess;
     author: string;
     title: string;
     description: string;
@@ -9,7 +15,7 @@ export interface IArticle {
     content: string;
 }
 
-interface ISource {
+interface ISourcess {
     id: string | null;
     name: string;
 }

@@ -1,4 +1,4 @@
-export interface NewsAPIMain {
+export interface ResponseSource {
     status: 'ok' | 'error';
     sources: ISourse[];
 }
