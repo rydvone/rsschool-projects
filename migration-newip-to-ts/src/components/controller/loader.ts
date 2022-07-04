@@ -1,6 +1,3 @@
-import { ResponseArticle } from '../../types/articles';
-import { ResponseSource } from '../../types/source';
-
 type getRespType = {
     endpoint: 'sources' | 'everything';
     options?: { [k: string]: string };
@@ -8,8 +5,8 @@ type getRespType = {
 
 class Loader {
     private _baseLink: string;
-    private _options: string[];
-    constructor(baseLink: string, options: string[]) {
+    private _options: { [k: string]: string };
+    constructor(baseLink: string, options: { [k: string]: string }) {
         this._baseLink = baseLink;
         this._options = options;
     }
@@ -35,7 +32,6 @@ class Loader {
 
     makeUrl(options: { [k: string]: string }, endpoint: string): string {
         // const urlOptions = { ...this.options, ...options };
-        // const urlOptions: { [k: string]: string; t: string } = { ...this._options, ...options };
         const urlOptions: { [k: string]: string } = { ...this._options, ...options };
         let url = `${this._baseLink}${endpoint}?`;
 
