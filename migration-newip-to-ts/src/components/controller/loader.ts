@@ -11,18 +11,8 @@ class Loader {
         this._options = options;
     }
 
-    // getResp<T>(
-    //     { endpoint, options = {} }: getRespType,
-    //     // callback = (): void => {
-    //     callback: (data: T) => void = () => {
-    //         console.error('No callback for GET response');
-    //     }
-    // ) {
-    //     this.load<T>('GET', endpoint, callback, options);
-    // }
     getResp<T>(
         { endpoint, options = {} }: getRespType,
-        // callback = (): void => {
         callback: (data: T) => void = () => {
             console.error('No callback for GET response');
         }
@@ -41,7 +31,6 @@ class Loader {
     }
 
     makeUrl(options: { [k: string]: string }, endpoint: string): string {
-        // const urlOptions = { ...this.options, ...options };
         const urlOptions: { [k: string]: string } = { ...this._options, ...options };
         let url = `${this._baseLink}${endpoint}?`;
 

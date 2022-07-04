@@ -3,6 +3,7 @@ const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const baseConfig = {
     entry: path.resolve(__dirname, './src/index.ts'),
@@ -20,7 +21,10 @@ const baseConfig = {
             },
             {
                 test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
-                type: 'asset/resource',
+                type: 'assets/img',
+                generator: {
+                    filename: 'assets/img/[name][hash][ext][query]',
+                },
             },
         ],
     },
@@ -32,12 +36,21 @@ const baseConfig = {
         path: path.resolve(__dirname, '../dist'),
     },
     plugins: [
-        new ESLintPlugin({ extensions: ['ts', 'js'] }),
+        new ESLintPlugin({ extensions: ['ts'] }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/index.html'),
             filename: 'index.html',
         }),
         new CleanWebpackPlugin(),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: './src/assets/img',
+                    to: 'assets',
+                    noErrorOnMissing: true,
+                },
+            ],
+        }),
     ],
 };
 

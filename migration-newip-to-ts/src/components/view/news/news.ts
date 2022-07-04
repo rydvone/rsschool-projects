@@ -11,18 +11,17 @@ class News {
         news.forEach((item, idx: number) => {
             const newsClone = newsItemTemp.content.cloneNode(true) as HTMLElement;
 
-            // if (idx % 2) newsClone.querySelector('.news__item').classList.add('alt');
             if (idx % 2) (newsClone.querySelector('.news__item') as HTMLInputElement).classList.add('alt');
 
-            // (newsClone.querySelector('.news__meta-photo') as HTMLInputElement).style.backgroundImage = `url(${
-            //     item.urlToImage || 'img/news_placeholder.jpg'
-            // })`;
-            const urlToImageItem = newsClone.querySelector('.news__meta-photo') as HTMLInputElement;
+            const urlToImageItem = newsClone.querySelector('.news__meta-photo') as HTMLElement;
             if (urlToImageItem === null) {
                 throw new Error('No element');
             }
+
+            console.log('item.urlToImage', item.urlToImage);
             urlToImageItem.style.backgroundImage = `url(${
-                item.urlToImage || './../../../assets/img/img_placeholder.jpg'
+                item.urlToImage ||
+                `https://flomaster.club/uploads/posts/2021-11/1635853791_1-flomaster-club-p-narisovannaya-gazeta-krasivii-risunok-1.jpg`
             })`;
 
             const authorItem = newsClone.querySelector('.news__meta-author');
@@ -55,7 +54,6 @@ class News {
             }
             descriptionItem.textContent = item.description;
 
-            // newsClone.querySelector('.news__read-more a').setAttribute('href', item.url);
             const setAttributeItem = newsClone.querySelector('.news__read-more a');
             if (setAttributeItem === null) {
                 throw new Error('No element');
@@ -65,8 +63,6 @@ class News {
             fragment.append(newsClone);
         });
 
-        // document.querySelector('.news').innerHTML = '';
-        // document.querySelector('.news').appendChild(fragment);
         const newsItem = document.querySelector('.news');
         if (newsItem === null) {
             throw new Error('No element');
