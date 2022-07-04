@@ -3,7 +3,7 @@ import { ResponseSource } from '../../types/source';
 
 type getRespType = {
     endpoint: 'sources' | 'everything';
-    options?: string;
+    options?: { [k: string]: string };
 };
 
 class Loader {
@@ -33,9 +33,10 @@ class Loader {
         return res;
     }
 
-    makeUrl(options, endpoint: string): string {
+    makeUrl(options: { [k: string]: string }, endpoint: string): string {
         // const urlOptions = { ...this.options, ...options };
-        const urlOptions: { [index: string]: string } = { ...this._options, ...options };
+        // const urlOptions: { [k: string]: string; t: string } = { ...this._options, ...options };
+        const urlOptions: { [k: string]: string } = { ...this._options, ...options };
         let url = `${this._baseLink}${endpoint}?`;
 
         Object.keys(urlOptions).forEach((key) => {
@@ -49,7 +50,7 @@ class Loader {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler.bind(this))
             .then((res) => res.json())
-            .then((data) => callback(data))
+            .then((data: K) => callback(data))
             .catch((err: Error) => console.error(err));
     }
 }
