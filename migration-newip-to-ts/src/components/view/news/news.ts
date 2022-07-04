@@ -18,7 +18,6 @@ class News {
                 throw new Error('No element');
             }
 
-            console.log('item.urlToImage', item.urlToImage);
             urlToImageItem.style.backgroundImage = `url(${
                 item.urlToImage ||
                 `https://flomaster.club/uploads/posts/2021-11/1635853791_1-flomaster-club-p-narisovannaya-gazeta-krasivii-risunok-1.jpg`
