@@ -21,7 +21,9 @@ class News {
             if (urlToImageItem === null) {
                 throw new Error('No element');
             }
-            urlToImageItem.style.backgroundImage = `url(${item.urlToImage || 'img/news_placeholder.jpg'})`;
+            urlToImageItem.style.backgroundImage = `url(${
+                item.urlToImage || './../../../assets/img/img_placeholder.jpg'
+            })`;
 
             const authorItem = newsClone.querySelector('.news__meta-author');
             if (authorItem === null) {
