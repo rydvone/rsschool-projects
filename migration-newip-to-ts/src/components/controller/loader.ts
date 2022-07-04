@@ -1,6 +1,6 @@
 type getRespType = {
     endpoint: 'sources' | 'everything';
-    options?: { [k: string]: string };
+    options?: { [k: string]: string | null };
 };
 
 class Loader {
@@ -11,9 +11,19 @@ class Loader {
         this._options = options;
     }
 
+    // getResp<T>(
+    //     { endpoint, options = {} }: getRespType,
+    //     // callback = (): void => {
+    //     callback: (data: T) => void = () => {
+    //         console.error('No callback for GET response');
+    //     }
+    // ) {
+    //     this.load<T>('GET', endpoint, callback, options);
+    // }
     getResp<T>(
         { endpoint, options = {} }: getRespType,
-        callback = (): void => {
+        // callback = (): void => {
+        callback: (data: T) => void = () => {
             console.error('No callback for GET response');
         }
     ) {
