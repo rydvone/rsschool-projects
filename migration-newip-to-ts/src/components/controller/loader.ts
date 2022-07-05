@@ -1,3 +1,5 @@
+import TemplateVisual from '../template/template';
+
 type getRespType = {
     endpoint: 'sources' | 'everything';
     options?: { [k: string]: string | null };
@@ -6,9 +8,11 @@ type getRespType = {
 class Loader {
     private _baseLink: string;
     private _options: { [k: string]: string };
+    private _template: TemplateVisual;
     constructor(baseLink: string, options: { [k: string]: string }) {
         this._baseLink = baseLink;
         this._options = options;
+        this._template = new TemplateVisual();
     }
 
     getResp<T>(
@@ -22,6 +26,7 @@ class Loader {
 
     errorHandler(res: Response) {
         if (!res.ok) {
+            this._template.makeTemplate(true);
             if (res.status === 401 || res.status === 404)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
             throw Error(res.statusText);
@@ -46,7 +51,10 @@ class Loader {
             .then(this.errorHandler.bind(this))
             .then((res) => res.json())
             .then((data: K) => callback(data))
-            .catch((err: Error) => console.error(err));
+            .catch((err: Error) => {
+                this._template.makeTemplate(true);
+                return console.error('Error is: ', err);
+            });
     }
 }
 
