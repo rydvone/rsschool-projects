@@ -1,18 +1,15 @@
 import News from './news/news';
-import Sources from './sources/sources';
 import { ResponseArticle } from '../../types/articles';
 import { ResponseSource } from '../../types/source';
-import Selects from '../selects/selects';
+import Slider from '../slider/slider';
 
 export class AppView {
     private news: News;
-    private sources: Sources;
-    private selects: Selects;
+    private slider: Slider;
 
     constructor() {
         this.news = new News();
-        this.sources = new Sources();
-        this.selects = new Selects();
+        this.slider = new Slider();
     }
 
     public drawNews(data: ResponseArticle): void {
@@ -22,8 +19,7 @@ export class AppView {
 
     public drawSources(data: ResponseSource): void {
         const values = data?.sources ? data?.sources : [];
-        this.selects.slider(values);
-        // this.sources.draw(values);
+        this.slider.slideControl(values);
     }
 }
 

@@ -2,14 +2,14 @@ import '../../global.css';
 import Sources from '../view/sources/sources';
 import { ISourse } from '../../types/source';
 
-class Selects {
+class Slider {
     private sources: Sources;
 
     constructor() {
         this.sources = new Sources();
     }
 
-    slider(data: ISourse[]) {
+    slideControl(data: ISourse[]) {
         const sliderControl = document.querySelector('.slider-control') as HTMLElement;
         createButton('less', 'slide-control__button', '<<', 'disabled');
         createButton('page', 'slide-control__button', '1');
@@ -114,4 +114,4 @@ class Selects {
     }
 }
 
-export default Selects;
+export default Slider;
