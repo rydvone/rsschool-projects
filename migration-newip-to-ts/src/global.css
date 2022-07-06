@@ -33,6 +33,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   color: #fff;
   background: #17181c;
   font-family: sans-serif;
@@ -45,6 +46,63 @@ header {
 header h1 {
   font-size: 40px;
   font-weight: 800;
+}
+
+.header {
+  display: flex ;
+  flex-direction: row;  
+  justify-content: space-between;
+}
+
+.header__select-wrapper {
+  display: flex ;
+  flex-direction: row;  
+  justify-content: center;
+  gap: 20px; 
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.header__form {
+  display: flex ;
+  flex-direction: column;  
+  justify-content: center;
+}
+
+.header__input,
+.header__select {
+  font: inherit;
+  line-height: 1.1;
+  color: #fffee0; 
+  background: transparent;
+  box-shadow: 0 0 15px 4px rgba(255,255,230,0.06);
+  display: block;
+  padding: 0 10px;
+  border-radius: 5px;  
+}
+
+.header__select {
+  font-size: 0.95em;
+}
+
+.header__option {
+  color: inherit; 
+  color: #fffee0;
+  background: #17181c;
+}
+
+.header__input:focus-visible {
+  color: #fffee0;
+  outline: none;
+  background-color: #000000;
+}
+
+::placeholder {
+  color: #b8b7b0;
+}
+
+main {
+  margin: 0 0 auto 0;
 }
 
 .visual {
@@ -61,6 +119,40 @@ header h1 {
 
 .visual.add {
   display: flex;
+}
+
+.slider-control {
+  display: flex ;
+  flex-direction: row;  
+  justify-content: center;
+  gap: 1em;
+  padding: 1rem 0;
+}
+
+.slide-control__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #8fdfff;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  border-radius: 80%;
+}
+
+.slide-control__button.active {
+  cursor: pointer;
+}
+
+.less,
+.more {
+  cursor: pointer;
 }
 
 footer {
