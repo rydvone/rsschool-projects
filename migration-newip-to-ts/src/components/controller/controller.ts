@@ -1,6 +1,13 @@
 import AppLoader from './appLoader';
+import Select from '../select/select';
 
 class AppController extends AppLoader {
+    private _select: Select;
+    constructor() {
+        super();
+        this._select = new Select();
+    }
+
     getSources<T>(callback: (data: T) => void) {
         super.getResp(
             {
@@ -10,31 +17,45 @@ class AppController extends AppLoader {
         );
     }
 
-    getNews<T>(e: Event, callback: (data: T) => void) {
+    getNews<T>(e: Event, sortBy: string, callback: (data: T) => void) {
         let target = e.target as HTMLElement;
         const newsContainer = e.currentTarget as HTMLElement;
-
-        while (target !== newsContainer) {
-            if (target.classList.contains('source__item')) {
-                const sourceId = target.getAttribute('data-source-id');
-                if (sourceId === null) {
-                    throw new Error('sourceId is empty');
-                }
-                if (newsContainer.getAttribute('data-source') !== sourceId) {
-                    newsContainer.setAttribute('data-source', sourceId);
-                    super.getResp(
-                        {
-                            endpoint: 'everything',
-                            options: {
-                                sources: sourceId,
+        if (newsContainer === null) {
+            const sourceId = target.getAttribute('data-source-id');
+            super.getResp(
+                {
+                    endpoint: 'everything',
+                    options: {
+                        sources: sourceId,
+                        page: sortBy,
+                    },
+                },
+                callback
+            );
+        } else {
+            while (target !== newsContainer) {
+                if (target.classList.contains('source__item')) {
+                    const sourceId = target.getAttribute('data-source-id');
+                    if (sourceId === null) {
+                        throw new Error('sourceId is empty');
+                    }
+                    if (newsContainer.getAttribute('data-source') !== sourceId) {
+                        newsContainer.setAttribute('data-source', sourceId);
+                        super.getResp(
+                            {
+                                endpoint: 'everything',
+                                options: {
+                                    sources: sourceId,
+                                    page: sortBy,
+                                },
                             },
-                        },
-                        callback
-                    );
+                            callback
+                        );
+                    }
+                    return;
                 }
-                return;
+                target = target.parentNode as HTMLElement;
             }
-            target = target.parentNode as HTMLElement;
         }
     }
 }

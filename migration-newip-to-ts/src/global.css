@@ -81,6 +81,11 @@ header h1 {
   border-radius: 5px;  
 }
 
+.header__label {
+  font-size: 0.6em;
+  padding: 0.3em 0;
+}
+
 .header__select {
   font-size: 0.95em;
 }
@@ -105,7 +110,8 @@ main {
   margin: 0 0 auto 0;
 }
 
-.visual {
+.visual,
+.visual-news {
   width: 80vw;
   height: 20vh;
   font: italic small-caps bold 4vw cursive;
@@ -118,6 +124,10 @@ main {
 }
 
 .visual.add {
+  display: flex;
+}
+
+.visual-news.add {
   display: flex;
 }
 
@@ -142,8 +152,7 @@ main {
   text-align: center;
   font-size: 1.1em;
   font-weight: bold;
-  letter-spacing: 0.06em;
-  border-radius: 80%;
+  border-radius: 10%;
 }
 
 .slide-control__button.active {

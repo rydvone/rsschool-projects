@@ -1,13 +1,27 @@
 import '../../global.css';
 
 class TemplateVisual {
-    makeTemplate(res: boolean) {
-        const templateItem = document.querySelector('.visual') as HTMLElement;
-
+    makeTemplate(element: string, res: boolean) {
+        const templateItem = document.querySelector(element) as HTMLElement;
         templateItem.classList.remove('add');
 
         if (res) {
             templateItem.classList.add('add');
+            const sourcesItem = document.querySelector('.sources') as HTMLElement;
+            if (sourcesItem === null) {
+                throw new Error('No element');
+            }
+            sourcesItem.innerHTML = '';
+            const newsItem = document.querySelector('.news');
+            if (newsItem === null) {
+                throw new Error('No element');
+            }
+            newsItem.innerHTML = '';
+            const sliderControl = document.querySelector('.slider-control') as HTMLElement;
+            if (sliderControl === null) {
+                throw new Error('No element');
+            }
+            sliderControl.innerHTML = '';
         }
     }
 }

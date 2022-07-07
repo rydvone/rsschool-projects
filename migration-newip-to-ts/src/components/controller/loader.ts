@@ -1,6 +1,6 @@
 import TemplateVisual from '../template/template';
 
-type getRespType = {
+type IResp = {
     endpoint: 'sources' | 'everything';
     options?: { [k: string]: string | null };
 };
@@ -16,7 +16,7 @@ class Loader {
     }
 
     getResp<T>(
-        { endpoint, options = {} }: getRespType,
+        { endpoint, options = {} }: IResp,
         callback: (data: T) => void = () => {
             console.error('No callback for GET response');
         }
@@ -26,7 +26,7 @@ class Loader {
 
     errorHandler(res: Response) {
         if (!res.ok) {
-            this._template.makeTemplate(true);
+            this._template.makeTemplate('.visual', true);
             if (res.status === 401 || res.status === 404)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
             throw Error(res.statusText);
@@ -36,13 +36,12 @@ class Loader {
     }
 
     makeUrl(options: { [k: string]: string }, endpoint: string): string {
-        const urlOptions: { [k: string]: string } = { ...this._options, ...options };
+        const urlOptions: { [x: string]: string } = { ...this._options, ...options };
         let url = `${this._baseLink}${endpoint}?`;
 
         Object.keys(urlOptions).forEach((key) => {
             url += `${key}=${urlOptions[key]}&`;
         });
-
         return url.slice(0, -1);
     }
 
@@ -52,7 +51,7 @@ class Loader {
             .then((res) => res.json())
             .then((data: K) => callback(data))
             .catch((err: Error) => {
-                this._template.makeTemplate(true);
+                this._template.makeTemplate('.visual', true);
                 return console.error('Error is: ', err);
             });
     }

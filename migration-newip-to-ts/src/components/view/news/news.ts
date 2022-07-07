@@ -1,8 +1,17 @@
 import './news.css';
 import { IArticle } from '../../../types/articles';
-
+import TemplateVisual from '../../template/template';
 class News {
+    private _template: TemplateVisual;
+
+    constructor() {
+        this._template = new TemplateVisual();
+    }
+
     draw(data: IArticle[]) {
+        if (data.length === 0) {
+            this._template.makeTemplate('.visual-news', true);
+        }
         const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
 
         const fragment = document.createDocumentFragment();
