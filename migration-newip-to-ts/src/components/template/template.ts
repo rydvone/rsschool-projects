@@ -7,6 +7,7 @@ class TemplateVisual {
 
         if (res && element === '.visual') {
             templateItem.classList.add('add');
+            (document.querySelector('.visual-news') as HTMLElement).classList.remove('add');
             const sourcesItem = document.querySelector('.sources') as HTMLElement;
             if (sourcesItem === null) {
                 throw new Error('No element');
